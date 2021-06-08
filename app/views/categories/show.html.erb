@@ -1,7 +1,12 @@
 <div class="container">
-  <h2><%= @category.name %></h2>
-  <p><%= @category.group %></p>
-  <%= image_tag image_url(@category.photo_url), width: 400 %>
+  <ul>
+    <% @category.products.each do |product| %>
+      <li><%= product.name %></li>
+      <%= image_tag image_url(product.photo_url), width: 300 %>
+      <li><p><%= product.price %>€</p></li>
+      <li><p><%= product.description %> </p></li>
+    <% end %>
+  </ul>
   <hr>
   <%= link_to 'Back', categories_path %>
 </div>
