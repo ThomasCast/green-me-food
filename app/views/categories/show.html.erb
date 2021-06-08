@@ -1,4 +1,7 @@
 <div class="container">
   <h2><%= @category.name %></h2>
   <p><%= @category.group %></p>
+  <%= image_tag image_url(@category.photo_url), width: 400 %>
+  <hr>
+  <%= link_to 'Back', categories_path %>
 </div>
