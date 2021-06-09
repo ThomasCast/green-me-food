@@ -90,7 +90,6 @@ cat7 = Category.create(name: "Epicerie sucré", group: "Produits Frais", photo_u
 
 cat8 = Category.create(name: "Hygiène et Beauté", group: "Produits de la maison", photo_url: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80")
 cat9 = Category.create(name: "Entretien et Netoyage", group: "Produits de la maison", photo_url: "https://images.unsplash.com/photo-1583907659441-addbe699e921?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2xlYW5pbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
-cat = Category.create(name: "", group: "", photo_url: "")
 
 
 puts "Finished"
