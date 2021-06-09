@@ -11,3 +11,34 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: $green;
+}
+
+h1, h2, h3 {
+  font-family: $headers-font;
+  color: $yellow;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+
+h3 {
+  font-size: 36px;
+}
+
+p {
+  font-family: $body-font;
+  font-size: 18px;
+  color: $beige;
+}
+
+
+
