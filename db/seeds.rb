@@ -32,8 +32,8 @@ producer_saucisson = Producer.create(name:"Dume", location:"Bastia", photo_url:"
 producer_sucre = Producer.create(name:"Philippe", location:"Orange", photo_url:"", description:"Depuis ma plus tendre enfance, j'adore le chocolat. Plus grand, j'ai appris a travailler cette matière peut commune au côté de grands chocolatiers. J'espère que vous apprécierez chacun de ces petits carrés de bonheur, car ils ont été fait avec amour.")
 
 #Producteurs prdduits de la maison
-producer_lavande = Producer.create(name:"Sarah", location:"Marseille", photo_url:"https://images.unsplash.com/photo-1589922585618-dfd1fcd87c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80", description:"Sarah, 29ans je suis productirce de Lavande de provence depuis maintenant 8ans.")
-producer_savon = Producer.create(name:"Jean", location:"Marseille", photo_url:"https://images.unsplash.com/photo-1569880153113-76e33fc52d5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80", description:"Bonjour, je m’appel Jean, j’ai 34ans, voilà maintenant 8ans que je produit dans ma petite usine du savon de Marseille avec la recette typique.")
+producer_hygiene_beaute = Producer.create(name:"Sixtine", location:"Marseille", photo_url:"https://images.unsplash.com/photo-1589922585618-dfd1fcd87c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80", description:"Avant de debuter dans la confection de savons et produits de beauté, j'ai été dermatologue. C'est donc avec respect de votre peau et de l'environnement que je conçois mes produits")
+producer_entretien_nettoyage = Producer.create(name:"Oscar", location:"Marseille", photo_url:"https://images.unsplash.com/photo-1569880153113-76e33fc52d5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80", description:"Tous mes produits sont confectionnés au coeur de Marseille, tout près du vieux port. Ils sont fabriqués dans le respect de l'environnement et sont testés dermatologiquement. Ce qui est bon pour nous est aussi bon pour la nature!")
 
 producer1 = Producer.create(name:"", location:"", photo_url:"", description:"")
 
@@ -64,12 +64,16 @@ product = Product.create(name:"Saucisson Corse", price: , photo_url:"", descript
 #Epicerie sucré
 product6 = Product.create(name:"Chocolat", price: , photo_url:"", description:"", producer_id: producer)
 #Hygiène et Beauté
-product = Product.create(name:"Lavande", price: 12, photo_url:"https://images.unsplash.com/photo-1580986584724-ae79be2aae43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1510&q=80", description:"Lavande de provence, parfum doux et subtile à la foie.", producer_id: producer5)
-product = Product.create(name:"Savon de Marseille", price: 7, photo_url:"https://images.unsplash.com/photo-1572527226808-051d3c05e7a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80", description:"Le savon pour qui vous fera une peau de bébé.",  producer_id: producer2)
-product = Product.create(name:"Crème de jour", price: , photo_url:"", description:"", producer_id: producer)
-product = Product.create(name:"Dentifrice", price: , photo_url:"", description:"", producer_id: producer)
+product = Product.create(name:"Lavande", price: 7.00, photo_url:"https://images.unsplash.com/photo-1580986584724-ae79be2aae43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1510&q=80", description:"/20gr", producer_id: producer5, category_id: cat8.id)
+product = Product.create(name:"Savon de Marseille", price: 13.00, photo_url:"https://images.unsplash.com/photo-1572527226808-051d3c05e7a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80", description:"p",  producer_id: producer2, category_id: cat8.id)
+product = Product.create(name:"Crème de jour", price: 12.00, photo_url:"", description:"p", producer_id: producer, category_id: cat8.id)
+product = Product.create(name:"Crème solaire", price: 15.00, photo_url:"", description:"p", producer_id: producer, category_id: cat8.id)
+product = Product.create(name:"Dentifrice", price: 4.70, photo_url:"", description:"p", producer_id: producer, category_id: cat8.id)
 #Entretien et Netoyage
-product = Product.create(name:"Lessive", price: , photo_url:"", description:"", producer_id: producer)
+product = Product.create(name:"Lessive", price: 15.00, photo_url:"", description:"2L", producer_id: producer, category_id: cat9.id)
+product = Product.create(name:"Vinaigre blanc", price: 3.00 , photo_url:"", description:"p", producer_id: producer, category_id: cat9.id)
+product = Product.create(name:"Papier toilettes", price: 7.00 , photo_url:"", description:"6p", producer_id: producer, category_id: cat9.id)
+
 
 product = Product.create(name:"", price: , photo_url:"", description:"", producer_id: producer)
 cat1 = Category.create(name: "Fruits", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")
