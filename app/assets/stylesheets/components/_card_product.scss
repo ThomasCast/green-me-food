@@ -1,0 +1,111 @@
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-width: 800px;
+  margin: 0 auto;
+  height-top: 500px;
+}
+
+.card-product {
+  // top: 50%;
+  // left: 50%;
+  height: 400px;
+  width: 300px;
+  border-radius: 6px;
+  // transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: transform .5s;
+  &:hover .card-front {
+      transform: rotateY(-180deg);
+  }
+  &:hover .card-back {
+      transform: rotateY(0deg);
+  }
+}
+
+
+.card-front {
+    height: 100%;
+    width: 100%;
+    background-position: 80% 80%;
+    background-size: cover;
+    border-radius: 6px;
+    background-image: url('https://source.unsplash.com/500x500/?strawberry');
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transition: transform .5s;
+}
+
+
+.card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://source.unsplash.com/500x500/?strawberry');
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: transform .5s;
+    color: #ffffff;
+}
+
+
+// PRODUCER
+
+.producer {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  p{
+    margin: 0;
+    padding-left: 12px;
+  }
+}
+
+.producer-img {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+
+// PRODUCT DETAILS
+
+.product-details {
+  padding: 12px;
+  p {
+    margin: 0;
+  }
+}
+
+.product-name {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.location {
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+
+  i, p {
+  font-size: 18px;
+  color: $beige;
+  }
+
+  p {
+    margin: 0;
+    padding-left: 12px;
+  }
+}
