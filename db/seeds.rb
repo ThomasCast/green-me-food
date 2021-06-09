@@ -24,6 +24,17 @@ producer3 = Producer.create(name:"Abdel", location:"Carpentras", photo_url:"http
 producer4 = Producer.create(name:"Kristel", location:"Banon", photo_url:"https://images.unsplash.com/photo-1589923188900-85dae523342b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80", description:"Hello, je vous présente Kristell, il y a maintenant 3ans que j’ai repris la chevrerie de mes parents à Banon pour produire le fameux fromage que l’on cherie tant, je bénéficie d’un savoir faire qui à été transmis de génération en génération.")
 producer5 = Producer.create(name:"Sarah", location:"Marseille", photo_url:"https://images.unsplash.com/photo-1589922585618-dfd1fcd87c28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80", description:"Sarah, 29ans je suis productirce de Lavande de provence depuis maintenant 8ans.")
 
+cat1 = Category.create(name: "Fruits", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")
+cat2 = Category.create(name: "Légumes", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80")
+cat3 = Category.create(name: "Viandes", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1448907503123-67254d59ca4f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80")
+cat4 = Category.create(name: "Poissons", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80")
+cat5 = Category.create(name: "Crèmerie", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1552767059-ce182ead6c1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")
+cat6 = Category.create(name: "Epicerie salé", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1551462147-ff29053bfc14?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzdGF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+cat7 = Category.create(name: "Epicerie sucré", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1610450949065-1f2841536c88?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hvY29sYXRlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+
+cat8 = Category.create(name: "Hygiène et Beauté", group: "Produits de la maison", photo_url: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80")
+cat9 = Category.create(name: "Entretien et Netoyage", group: "Produits de la maison", photo_url: "https://images.unsplash.com/photo-1583907659441-addbe699e921?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2xlYW5pbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
+
 #Fruits
 product1 = Product.create(name:"Melon", price: 3, photo_url:"https://images.unsplash.com/photo-1598533834006-7679b2aea830?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=802&q=80", description:"/p", producer_id: producer1, category_id: cat1.id)
 product2 = Product.create(name:"Fraises", price: 4.30, photo_url:"https://images.unsplash.com/photo-1590831701857-a2d4a8921353?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80", description:"/250g", producer_id: producer3, category_id: cat1.id)
@@ -72,7 +83,7 @@ product38 = Product.create(name:"Calisson d'Aix", price: 2.79, photo_url:"https:
 product39 = Product.create(name:"sucre", price: 1.99, photo_url:"https://images.unsplash.com/photo-1581268497089-7a975fb491a3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c3VnYXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", description:"/500g", producer_id: producer, category_id: cat7.id)
 #Hygiène et Beauté7
 product40 = Product.create(name:"Lavande", price: 12, photo_url:"https://images.unsplash.com/photo-1580986584724-ae79be2aae43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1510&q=80", description:"/p", producer_id: producer5, category_id: cat8.id)
-product41 = Product.create(name:"Savon de Marseille", price: 7, photo_url:"https://images.unsplash.com/photo-1572527226808-051d3c05e7a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80", description:"/p",  producer_id: producer2, category_id: cat.id)
+product41 = Product.create(name:"Savon de Marseille", price: 7, photo_url:"https://images.unsplash.com/photo-1572527226808-051d3c05e7a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80", description:"/p",  producer_id: producer2, category_id: cat8.id)
 product42 = Product.create(name:"Crème de jour ", price: 8.50, photo_url:"https://images.unsplash.com/photo-1585232351009-aa87416fca90?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGRheSUyMGNyZWFtfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", description:"/p", producer_id: producer, category_id: cat8.id)
 product43 = Product.create(name:"Dentifrice en poudre", price: 2.50, photo_url:"https://images.unsplash.com/photo-1605615016732-03add3ee505d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHRvb3RocGFzdGUlMjBwb3VkcmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", description:"/p", producer_id: producer, category_id: cat8.id)
 #Entretien et Netoyage
@@ -80,16 +91,6 @@ product44 = Product.create(name:"Lessive au savon de Marseille", price: 8.90, ph
 
 #product = Product.create(name:"", price: , photo_url:"", description:"", producer_id: producer)
 
-cat1 = Category.create(name: "Fruits", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")
-cat2 = Category.create(name: "Légumes", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80")
-cat3 = Category.create(name: "Viandes", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1448907503123-67254d59ca4f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80")
-cat4 = Category.create(name: "Poissons", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80")
-cat5 = Category.create(name: "Crèmerie", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1552767059-ce182ead6c1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")
-cat6 = Category.create(name: "Epicerie salé", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1551462147-ff29053bfc14?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGFzdGF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
-cat7 = Category.create(name: "Epicerie sucré", group: "Produits Frais", photo_url: "https://images.unsplash.com/photo-1610450949065-1f2841536c88?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hvY29sYXRlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
-
-cat8 = Category.create(name: "Hygiène et Beauté", group: "Produits de la maison", photo_url: "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80")
-cat9 = Category.create(name: "Entretien et Netoyage", group: "Produits de la maison", photo_url: "https://images.unsplash.com/photo-1583907659441-addbe699e921?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2xlYW5pbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60")
 
 
 puts "Finished"
