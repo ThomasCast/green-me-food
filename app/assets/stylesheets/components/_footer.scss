@@ -1,7 +1,6 @@
 .footer {
   width: 100%;
   background: #FAF2E5;
-  color: #102D2D;
   height: 200px;
   margin-top: 20px;
   padding: 0 300px;
@@ -41,14 +40,16 @@
 
 .footer p {
   margin: 5px 0;
+  color: #102D2D;
 }
 
 .footer h3 {
   text-align: left;
   padding-top: 20px;
-  // font-family: ;
+  font-family: $body-font;
   font-size: 18px;
   font-weight: 700;
+  color: #102D2D;
 }
 
 #services {
