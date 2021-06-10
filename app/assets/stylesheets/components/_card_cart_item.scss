@@ -32,6 +32,12 @@
     color: $green;
     margin-bottom: 0px;
   }
+  img {
+    width: 150px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
 }
 
 .cart-item {
@@ -43,12 +49,6 @@
   }
 }
 
-img {
-  width: 150px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 4px;
-}
 
 td {
     font-family: $body-font;
