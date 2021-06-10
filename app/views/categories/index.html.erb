@@ -1,10 +1,15 @@
 <div class="container">
   <h1>Categories</h1>
-  <ul>
+  <div class="row">
     <% @categories.each do |category| %>
-      <li><%= link_to category.name, category_path(category) %></li>
-      <%= image_tag image_url(category.photo_url), width: 300 %>
+      <div class="co-12 colsm-6 col-md-4">
+        <%= link_to category_path(category), class:'text-decoration-none' do %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
+            <%= category.name %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
-  </ul>
-  <hr>
+  </div>
+
 </div>
