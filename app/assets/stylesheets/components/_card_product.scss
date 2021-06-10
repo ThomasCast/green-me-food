@@ -3,7 +3,7 @@
   width: 260px;
   border-radius: 6px;
   margin: 20px 20px;
-  box-shadow: 4px 5px 10px rgba(0, 0, 0, .2);
+  // box-shadow: 4px 5px 10px rgba(0, 0, 0, .2);
   justify-self: center;
   transform-style: preserve-3d;
   perspective: 600px;
@@ -50,7 +50,7 @@
 .card-front {
   height: 100%;
   width: 100%;
-  background-position: 80% 80%;
+  background-position: center;
   background-size: cover;
   border-radius: 6px;
   position: absolute;
@@ -71,6 +71,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
+  background-position: center;
   top: 0;
   left: 0;
   backface-visibility: hidden;
@@ -109,7 +110,7 @@
 
 .products {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   flex-direction: row;
   flex-wrap: wrap;
   min-width: 800px;
@@ -166,13 +167,3 @@
 .articles h2 {
   margin-bottom: 5vh;
 }
-
-// TO WAIT FOR THE ANIMATION TO BE DONE (fixes the initial flip of the product card)
-// .preload-transitions * {
-//   $null-transition: none !important;
-//   -webkit-transition: $null-transition;
-//   -moz-transition: $null-transition;
-//   -ms-transition: $null-transition;
-//   -o-transition: $null-transition;
-//   transition: $null-transition;
-// }
