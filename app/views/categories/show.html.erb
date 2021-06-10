@@ -1,13 +1,13 @@
 <div class="container">
-
   <ul>
     <% @category.products.each do |product| %>
       <li><%= product.name %></li>
       <%= image_tag image_url(product.photo_url), width: 300 %>
-      <p><%= product.price %>€</p>
-      <p><%= product.description %> </p>
+      <li><p><%= product.price %>€</p></li>
+      <li><p><%= product.description %> </p></li>
     <% end %>
   </ul>
+
   <hr>
   <%= link_to 'Back', categories_path %>
 </div>
@@ -91,3 +91,12 @@ window.onclick = function(event) {
 </div>
 
 
+<<<<<<< HEAD
+=======
+<!-- <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded",function(){
+    let node = document.querySelector('.preload-transitions');
+    node.classList.remove('preload-transitions');
+  });
+</script> -->
+>>>>>>> master
