@@ -35,7 +35,10 @@
 }
 
 .selected-items {
+  display: flex;
+  align-content: flex-start;
   width: 100%;
+  margin-top: 0px;
 }
 
 .item-description {
