@@ -3,30 +3,28 @@
     <% @category.products.each do |product| %>
       <li><%= product.name %></li>
       <%= image_tag image_url(product.photo_url), width: 300 %>
-      <li><p><%= product.price %>€</p></li>
-      <li><p><%= product.description %> </p></li>
+      <p><%= product.price %>€</p>
+      <p><%= product.description %> </p>
     <% end %>
   </ul>
   <hr>
   <%= link_to 'Back', categories_path %>
 </div>
 
-<<<<<<< HEAD
 <button id="myBtn">Open Modal</button>
 
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close">&times;</span>
-      </div>
-      <div class="modal-body">
-        <h3><%= product.name %>, de <%= product.location %></h3>
-        <p><%= product.description %>
-        </p>
-      </div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+      <h3>Thierry, de Carpentras</h3>
+      <p>Bonjour, je suis Abdel, producteur des fameuses fraises de Carpentras.</p>
     </div>
   </div>
 </div>
+
 
 <script>
 // Get the modal

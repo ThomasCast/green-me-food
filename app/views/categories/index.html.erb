@@ -6,3 +6,37 @@
       <%= image_tag image_url(category.photo_url), width: 300 %>
     <% end %>
   </ul>
+</div>
+
+<div class="container">
+  <div class="products">
+    <% @products.each do |product| %>
+    <% card_classes = product.is_in_user_cart?(current_user) ? "card-product added-to-cart" : "card-product" %>
+      <div class="<%= card_classes %>" data-product-id="<%= product.id %>" data-category-id="<%= product.category.id %>">
+        <div class="card-front"></div>
+        <div class="card-back">
+          <!-- ITERATE HERE !!! -->
+          <div class="producer">
+            <img src="https://source.unsplash.com/60x60/?portrait" alt="" class="producer-img">
+            <p>Thierry, producteur</p>
+          </div>
+          <div class="product-details">
+            <p class="price-quantity">4,99€/250gr</p>
+            <p class="product-name">Fraises</p>
+            <div class="location">
+              <i class="fas fa-location-arrow"></i>
+              <p>Carpentras</p>
+            </div>
+          </div>
+          <div class="cart-form">
+            <%= simple_form_for([ product, CartItem.new(product: product) ], remote: true) do |f| %>
+              <%= f.input :product_id, as: :hidden %>
+              <%= f.button :submit, class: "btn btn-primary"%>
+            <% end %>
+          </div>
+          <div class="added-to-cart-btn"><%= image_tag "checked" %> </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

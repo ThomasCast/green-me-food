@@ -18,46 +18,76 @@
   transform-style: preserve-3d;
   perspective: 600px;
   transition: transform .5s;
+
   &:hover .card-front {
-      transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
   }
+
   &:hover .card-back {
+    transform: rotateY(0deg);
+  }
+
+  .added-to-cart-btn {
+    display: none;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  &.added-to-cart {
+
+    .card-back {
       transform: rotateY(0deg);
+    }
+
+    .card-front {
+      transform: rotateY(-180deg);
+    }
+
+    .cart-form {
+      display: none;
+    }
+
+    .added-to-cart-btn {
+      display: block;
+    }
   }
 }
 
 
 .card-front {
-    height: 100%;
-    width: 100%;
-    background-position: 80% 80%;
-    background-size: cover;
-    border-radius: 6px;
-    background-image: url('https://source.unsplash.com/500x500/?strawberry');
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transition: transform .5s;
+  height: 100%;
+  width: 100%;
+  background-position: 80% 80%;
+  background-size: cover;
+  border-radius: 6px;
+  background-image: url('https://source.unsplash.com/500x500/?strawberry');
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform .5s;
 }
 
 
 .card-back {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 6px;
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://source.unsplash.com/500x500/?strawberry');
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-    transition: transform .5s;
-    color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 6px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/500x500/?strawberry');
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform .5s;
+  color: #ffffff;
 }
 
 
@@ -67,7 +97,8 @@
   display: flex;
   align-items: center;
   padding: 8px;
-  p{
+
+  p {
     margin: 0;
     padding-left: 12px;
   }
@@ -84,6 +115,7 @@
 
 .product-details {
   padding: 12px;
+
   p {
     margin: 0;
   }
@@ -99,9 +131,10 @@
   align-content: center;
   align-items: baseline;
 
-  i, p {
-  font-size: 18px;
-  color: $beige;
+  i,
+  p {
+    font-size: 18px;
+    color: $beige;
   }
 
   p {
