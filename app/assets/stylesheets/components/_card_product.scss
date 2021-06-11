@@ -1,52 +1,87 @@
-
 .card-product {
   height: 320px;
   width: 260px;
   border-radius: 6px;
   margin: 20px 20px;
-  box-shadow: 4px 5px 10px rgba(0, 0, 0, .2);
+  // box-shadow: 4px 5px 10px rgba(0, 0, 0, .2);
   justify-self: center;
   transform-style: preserve-3d;
   perspective: 600px;
   transition: transform .5s;
+
   &:hover .card-front {
-      transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
   }
+
   &:hover .card-back {
+    transform: rotateY(0deg);
+  }
+
+  .added-to-cart-btn {
+    display: none;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  &.added-to-cart {
+
+    .card-back {
       transform: rotateY(0deg);
+    }
+
+    .card-front {
+      transform: rotateY(-180deg);
+    }
+
+    .cart-form {
+      display: none;
+    }
+
+    .added-to-cart-btn {
+      display: block;
+    }
   }
 }
 
+.card-hidden {
+  display: none;
+}
 
 .card-front {
-    height: 100%;
-    width: 100%;
-    background-position: 80% 80%;
-    background-size: cover;
-    border-radius: 6px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transition: transform .5s;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform .5s;
 }
 
 
 .card-back {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 6px;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-    transition: transform .5s;
-    color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: center;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform .5s;
+  color: #ffffff;
+
 }
 
 
@@ -55,10 +90,12 @@
 .producer {
   display: flex;
   align-items: center;
+
   padding: 12px 12px 20px;
   padding-bottom: 30px;
 
-  p{
+  p {
+
     margin: 0;
     padding-left: 12px;
   }
@@ -76,18 +113,19 @@
 
 .products {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   flex-direction: row;
   flex-wrap: wrap;
   min-width: 800px;
   margin: 0 auto;
-  height-top: 500px;
+  justify-content: center;
 }
 
 .product {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   i {
     font-size: 24px;
     color: $beige;
@@ -97,7 +135,9 @@
 }
 
 .product-details {
+
   padding: 0px 0px 0px 12px;
+
   p {
     margin: 0;
   }
@@ -114,27 +154,19 @@
   align-content: center;
   align-items: baseline;
 
-  i, p {
-  font-size: 18px;
-  color: $beige;
+  i,
+  p {
+    font-size: 18px;
+    color: $beige;
   }
 
   p {
     margin: 0;
     padding-left: 12px;
   }
+
 }
 
 .articles h2 {
   margin-bottom: 5vh;
 }
-
-// TO WAIT FOR THE ANIMATION TO BE DONE (fixes the initial flip of the product card)
-// .preload-transitions * {
-//   $null-transition: none !important;
-//   -webkit-transition: $null-transition;
-//   -moz-transition: $null-transition;
-//   -ms-transition: $null-transition;
-//   -o-transition: $null-transition;
-//   transition: $null-transition;
-// }
