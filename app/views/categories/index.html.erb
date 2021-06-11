@@ -5,15 +5,14 @@
       <ul class="carousel-items">
         <% @categories.each do |category| %>
           <div class="col-12 col-sm-7 col-md-3">
-            <%= link_to category_path(category), class:'text-decoration-none' do %>
               <div id="mycategory" class="card-category" data-category-id="<%= category.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
                 <%= category.name %>
                 <li class="carousel-item"></li>
               </div>
-            <% end %>
           </div>
         <% end %>
       </ul>
+    </section>
 
 
   <div class="products">
