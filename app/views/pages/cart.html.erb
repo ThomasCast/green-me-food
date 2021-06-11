@@ -14,16 +14,6 @@
             <!--<td id="col-total">Total</td>-->
           </tr>
 
-          <tr class="cart-item">
-            <td class="item-description">
-              <p>Fraises</p>
-              <img src="https://source.unsplash.com/100x80/?strawberry" alt="">
-            </td>
-            <td class="item-quantity">-  1  +  <i class="far fa-trash-alt"></i> </td>
-            <td class="item-single-price">4,99€</td>
-            <!-- <td class="item-total-price">4,99€</td> -->
-          </tr>
-
           <tr class="cart-item">-
             <td class="item-description">
               <p>Pommes de rainette</p>
@@ -76,29 +66,64 @@
   </div>
 
 
-    <div class="frequency-col col-5">
-      <h2>Fréquence de livraison</h2>
+  <div class="frequency-col col-5">
+    <h2>Fréquence de livraison</h2>
 
-      <div class="frequency-choice">
-        <h3>Juste cette fois-ci</h3>
-        <hr>
-        <p>Glissez-déposer l'article que vous voulez recevoir qu'une fois, à la prochiane livraison</p>
+    <div class="frequency-choice">
+      <h3>Juste cette fois-ci</h3>
+      <hr>
+      <div class="selected-items">
+        <table class="cart-table">
+          <tbody>
+            <tr class="cart-item">
+              <td class="item-description">
+                <p>Hamon d'España</p>
+                <img src="https://source.unsplash.com/100x80/?ham" alt="">
+              </td>
+              <td class="item-quantity">-  1  +  <i class="far fa-trash-alt"></i> </td>
+              <td class="item-single-price">1254,87€</td>
+              <!-- <td class="item-total-price">4,99€</td> -->
+            </tr>
+          </tbody>
+        </table>
       </div>
+    </div>
 
-      <div class="frequency-choice">
-        <h3>Toutes les semaines</h3>
-        <hr>
-      </div>
+    <div class="frequency-choice">
+      <h3>Toutes les semaines</h3>
+      <hr>
+      <div class="selected-items">
+        <table class="cart-table">
+          <tbody>
 
-      <div class="frequency-choice">
-        <h3>Toutes les deux semaines</h3>
-        <hr>
+            <tr class="cart-item">
+              <td class="item-description">
+                <p>Fraises</p>
+                <img src="https://source.unsplash.com/100x80/?strawberry" alt="">
+              </td>
+              <td class="item-quantity">-  4  +  <i class="far fa-trash-alt"></i> </td>
+              <td class="item-single-price">4,99€</td>
+              <!-- <td class="item-total-price">4,99€</td> -->
+            </tr>
+          </tbody>
+        </table>
       </div>
+    </div>
 
-      <div class="frequency-choice">
-        <h3>Tous les mois</h3>
-        <hr>
-      </div>
+    <div class="frequency-choice">
+      <h3>Toutes les deux semaines</h3>
+      <hr>
+    </div>
+
+    <div class="frequency-choice">
+      <h3>Tous les mois</h3>
+      <hr>
     </div>
   </div>
 </div>
+<div class="container">
+  <div class="navigation-buttons" id="right-align">
+    <%= link_to "Procéder au paiement  >", cart_path, class: "btn-yellow"%>
+  </div>
+</div>
+
