@@ -28,6 +28,7 @@
                 <i class="fas fa-location-arrow"></i>
                 <p><%= product.producer.location %></p>
               </div>
+              <div class="added-to-cart-btn"><%= image_tag("checked.svg") %></div>
             </div>
           </div>
           <div class="cart-form">
@@ -42,5 +43,9 @@
       </div>
     <% end %>
   </div>
-  <%= link_to 'Retour', root_path, class: "btn-yellow" %>
+  <div class="navigation-buttons">
+    <%= link_to '^ Haut de page', categories_path, class: "btn-yellow" %>
+    <%= link_to "Afficher mon panier  >", cart_path, class: "btn-yellow" %>
+  </div>
 </div>
+
