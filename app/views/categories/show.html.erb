@@ -1,38 +1,16 @@
-<div class="container">
-
-
-  <h1>Products page</h1>
-  <div class="products">
-    <% @category.products.each do |product| %>
-    <div class="card-product preload-transitions">
-      <div class="card-front" style="background-image: url(<%= image_url(product.photo_url) %>) "></div>
-      <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)),url(<%= image_url(product.photo_url) %>) ">
-
-<!-- ADD LINK TO PRODUCER PROFILE PAGE -->
-
-        <div class="producer" >
-          <div class="producer-img"><%= image_tag(product.producer.photo_url) %></div>
-          <p><%= product.producer.name %>, producteur</p>
-        </div>
-
-        <div class="product">
-          <div class="product-details">
-            <p class="price-quantity"><%= product.price %>€<%= product.description %></p>
-            <p class="product-name"><%= product.name %></p>
-            <div class="location">
-              <i class="fas fa-location-arrow"></i>
-              <p><%= product.producer.location %></p>
-            </div>
-          </div>
-
-<!-- ADD LINK "ADD TO CART" -->
-
-          <i class="fas fa-shopping-basket"></i>
-        </div>
-      </div>
+<%# MODAL %>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3><%= product.producer.name %>, de<%=product.producer.location %></h3>
+      <span class="close">&times;</span>
     </div>
-    <% end %>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
   </div>
-  <a class="btn-yellow"><%= link_to 'Back', categories_path %></a>
 </div>
-

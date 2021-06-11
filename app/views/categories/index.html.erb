@@ -14,9 +14,9 @@
     <% @products.each do |product| %>
       <% card_classes = product.is_in_user_cart?(current_user) ? "card-product added-to-cart card-hidden" : "card-product card-hidden" %>
       <div class="<%= card_classes %>" data-product-id="<%= product.id %>" data-category-id="<%= product.category.id %>">
-        <div class="card-front" style="background-image: url(<%= image_url(product.photo_url) %>) "></div>
-        <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)),url(<%= image_url(product.photo_url) %>) ">
-          <div class="producer">
+        <div class="card-front" style="background-image: url(<%= image_url(product.photo_url) %>)"></div>
+        <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url(<%= image_url(product.photo_url) %>) ">
+          <div id="myproducer" class="producer">
             <div class="producer-img"><%= image_tag(product.producer.photo_url) %></div>
             <p><%= product.producer.name %>, producteur</p>
           </div>
@@ -28,13 +28,12 @@
                 <i class="fas fa-location-arrow"></i>
                 <p><%= product.producer.location %></p>
               </div>
-              <div class="added-to-cart-btn"><%= image_tag("checked.svg") %></div>
             </div>
           </div>
           <div class="cart-form">
             <%= simple_form_for([ product, CartItem.new(product: product) ], remote: true) do |f| %>
               <%= f.input :product_id, as: :hidden %>
-              <%= f.button :submit, class: "fas fa-shopping-basket" %>
+              <%= f.button :submit, class: "btn btn-success" %>
               <%# <i class="fas fa-shopping-basket"></i> %>
             <% end %>
           </div>
@@ -49,3 +48,19 @@
   </div>
 </div>
 
+<% @products.each do |product| %>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header" style="background-image: url(<%= image_url(product.photo_url) %>)">
+      <span class="close">&times;</span>
+      </div>
+      <div class="modal-image">
+        <%= image_tag(product.producer.photo_url) %>
+      </div>
+      <div class="modal-body">
+        <h3><%= product.producer.name %>, de <%= product.producer.location %></h3>
+        <p><%= product.producer.description %></p>
+      </div>
+    </div>
+  </div>
+<% end %>

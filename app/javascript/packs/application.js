@@ -28,11 +28,13 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { filterCategories } from '../components/category';
+import { modalPopUp } from '../components/modal';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   filterCategories();
+  modalPopUp();
   
 });
 
