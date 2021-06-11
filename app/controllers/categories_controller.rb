@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   
   def index
     @categories = Category.all
-    @products = Product.all
+    @products = Product.where(params[:category_id])
   end
   
   def show

@@ -3,60 +3,44 @@
   <div class="row">
     <% @categories.each do |category| %>
       <div class="col-12 col-sm-6 col-md-4">
-        <%= link_to category_path(category), class:'text-decoration-none' do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
-            <%= category.name %>
-          </div>
-        <% end %>
+        <div id="mycategory" class="card-category" data-category-id="<%= category.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
+          <%= category.name %>
+        </div>
       </div>
     <% end %>
   </div>
-  <div class="row">
-    <% @categories.reverse.each do |category| %>
-      <div class="col-12 col-sm-6 col-md-4">
-        <%= link_to category_path(category), class:'text-decoration-none' do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
-            <%= category.name %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+
   <div class="products">
     <% @products.each do |product| %>
-      <div class="card-product">
-        <% card_classes = product.is_in_user_cart?(current_user) ? "card-product added-to-cart" : "card-product" %>
-          <div class="<%= card_classes %>" data-product-id="<%= product.id %>" data-category-id="<%= product.category.id %>">
-            <div class="card-front" style="background-image: url(<%= image_url(product.photo_url) %>) "></div>
-            <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)),url(<%= image_url(product.photo_url) %>) ">
-              <div class="producer">
-                <div class="producer-img"><%= image_tag(product.producer.photo_url) %></div>
-                <p><%= product.producer.name %>, producteur</p>
+      <% card_classes = product.is_in_user_cart?(current_user) ? "card-product added-to-cart card-hidden" : "card-product card-hidden" %>
+      <div class="<%= card_classes %>" data-product-id="<%= product.id %>" data-category-id="<%= product.category.id %>">
+        <div class="card-front" style="background-image: url(<%= image_url(product.photo_url) %>) "></div>
+        <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)),url(<%= image_url(product.photo_url) %>) ">
+          <div class="producer">
+            <div class="producer-img"><%= image_tag(product.producer.photo_url) %></div>
+            <p><%= product.producer.name %>, producteur</p>
+          </div>
+          <div class="product">
+            <div class="product-details">
+              <p class="price-quantity"><%= product.price %>€<%= product.description %></p>
+              <p class="product-name"><%= product.name %></p>
+              <div class="location">
+                <i class="fas fa-location-arrow"></i>
+                <p><%= product.producer.location %></p>
               </div>
-              <div class="product">
-                <div class="product-details">
-                  <p class="price-quantity"><%= product.price %>€<%= product.description %></p>
-                  <p class="product-name"><%= product.name %></p>
-                  <div class="location">
-                    <i class="fas fa-location-arrow"></i>
-                    <p><%= product.producer.location %></p>
-                  </div>
-                </div>
-              </div>
-              <div class="cart-form">
-                <%= simple_form_for([ product, CartItem.new(product: product) ], remote: true) do |f| %>
-                  <%= f.input :product_id, as: :hidden %>
-                  <%= f.button :submit, class: "fas fa-shopping-basket" %>
-                  <%# <i class="fas fa-shopping-basket"></i> %>
-                <% end %>
-              </div>
-              <div class="added-to-cart-btn"><%= image_tag "checked" %></div>
             </div>
           </div>
+          <div class="cart-form">
+            <%= simple_form_for([ product, CartItem.new(product: product) ], remote: true) do |f| %>
+              <%= f.input :product_id, as: :hidden %>
+              <%= f.button :submit, class: "fas fa-shopping-basket" %>
+              <%# <i class="fas fa-shopping-basket"></i> %>
+            <% end %>
+          </div>
+          <div class="added-to-cart-btn"><%= image_tag "checked" %></div>
         </div>
+      </div>
     <% end %>
   </div>
+  <%= link_to 'Retour', root_path, class: "btn-yellow" %>
 </div>
-<%= link_to 'Back', categories_path, class: "btn-yellow" %>
-
-
