@@ -1,0 +1,9 @@
+.hover {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.hover:hover {
+  filter: brightness(120%);
+  transform: scale(1.07);
+}

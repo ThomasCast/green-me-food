@@ -4,7 +4,7 @@
     <% @categories.each do |category| %>
       <div class="col-12 col-sm-6 col-md-4">
         <%= link_to category_path(category), class:'text-decoration-none' do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
+          <div class="card-category hover" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
             <%= category.name %>
           </div>
         <% end %>
@@ -15,7 +15,7 @@
     <% @categories.reverse.each do |category| %>
       <div class="col-12 col-sm-6 col-md-4">
         <%= link_to category_path(category), class:'text-decoration-none' do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
+          <div class="card-category hover" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
             <%= category.name %>
           </div>
         <% end %>
