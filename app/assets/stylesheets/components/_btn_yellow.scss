@@ -15,3 +15,24 @@
   //  transform: scale(1.2, 1.05);
   }
 }
+
+
+
+.btn-yellow-home-page{
+  display: flex;
+  align-items: center;
+  height: 68px;
+  font-size: 24px;
+  padding: 0 24px ;
+  color: $green;
+  background-color: $yellow;
+  // text-align: center;
+  text-decoration: none;
+  // transition: 0.5s;
+  &:hover {
+    text-decoration: none;
+    background-color: $beige;
+    color: $green;
+  //  transform: scale(1.2, 1.05);
+  }
+}
