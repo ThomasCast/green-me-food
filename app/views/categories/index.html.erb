@@ -1,15 +1,24 @@
 <div class="container">
   <h1>Categories</h1>
-  <div class="row">
-    <% @categories.each do |category| %>
-      <div class="co-12 colsm-6 col-md-4">
-        <%= link_to category_path(category), class:'text-decoration-none' do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
-            <%= category.name %>
+    <section class="carousel">
+      <ul class="carousel-items">
+        <% @categories.each do |category| %>
+          <div class="co-12 colsm-7 col-md-3">
+            <%= link_to category_path(category), class:'text-decoration-none' do %>
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
+                <%= category.name %>
+                <li class="carousel-item"></li>
+              </div>
+            <% end %>
           </div>
         <% end %>
-      </div>
-    <% end %>
-  </div>
+      </ul>
+    </section>
 
 </div>
+
+
+
+<!-- <div class="row">
+ </div>
+ -->
