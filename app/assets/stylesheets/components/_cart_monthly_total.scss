@@ -1,7 +1,28 @@
 .monthly-total {
   background-color: $beige;
   border-radius: 6px;
+  padding: 12px 12px 2px 16px;
   h3 {
     color: $green;
+    padding-bottom: 24px;
+  }
+}
+
+.monthly-subtotal {
+  text-align: right;
+}
+
+.monthly-quantity {
+  text-align: center;
+}
+
+.total-cart {
+  display: flex;
+  justify-content: space-between;
+  p, #total {
+    color: $green;
+  }
+  #total {
+    font-weight: bold;
   }
 }

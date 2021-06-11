@@ -12,8 +12,11 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
+          <%= link_to "My cart", cart_path, class: "navbar-link" do %>
+            <%= image_tag "shopping-basket.png", id: "shopping-cart-icon" %>
+          <% end %>
           <%= link_to "#", class: "navbar-link" do %>
-            <%= image_tag "messager.png" %>
+            <%= image_tag "messager.png", id: "messages-icon" %>
           <% end %>
         <li class="nav-item dropdown">
           <%= image_tag "user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

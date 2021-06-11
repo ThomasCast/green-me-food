@@ -8,9 +8,9 @@
       <table class="cart-table">
         <tbody>
           <tr class="table-headers">
-            <td id="col-product">Produit</td>
+            <td id="col-product-up">Produit</td>
             <td id="col-quantity">Quantité</td>
-            <td id="col-price">Prix à l'unité</td>
+            <td id="col-price-up">Prix à l'unité</td>
             <!--<td id="col-total">Total</td>-->
           </tr>
 
@@ -19,7 +19,7 @@
               <p>Fraises</p>
               <img src="https://source.unsplash.com/100x80/?strawberry" alt="">
             </td>
-            <td class="item-quantity">- 1 +  <i class="far fa-trash-alt"></i> </td>
+            <td class="item-quantity">-  1  +  <i class="far fa-trash-alt"></i> </td>
             <td class="item-single-price">4,99€</td>
             <!-- <td class="item-total-price">4,99€</td> -->
           </tr>
@@ -29,17 +29,17 @@
               <p>Pommes de rainette</p>
               <img src="https://source.unsplash.com/100x80/?apple" alt="">
             </td>
-            <td class="item-quantity"> - 3 + <i class="far fa-trash-alt"></i> </td>
+            <td class="item-quantity">-  3  +  <i class="far fa-trash-alt"></i> </td>
             <td class="item-single-price">156,99€</td>
             <!-- <td class="item-total-price">1200,99€</td> -->
           </tr>
 
           <tr class="cart-item">
             <td class="item-description">
-              <p>Viande de Kobé premium ++++</p>
+              <p>Viande de Kobé</p>
               <img src="https://source.unsplash.com/150x60/?meat" alt="">
             </td>
-            <td class="item-quantity"> - 40 + <i class="far fa-trash-alt"></i> </td>
+            <td class="item-quantity">-  40  +  <i class="far fa-trash-alt"></i> </td>
             <td class="item-single-price">44,99€</td>
             <!-- <td class="item-total-price">1649,99€</td> -->
           </tr>
@@ -51,22 +51,27 @@
       <table class="cart-table">
         <tbody>
           <tr class="table-headers">
-            <td>Produit</td>
+            <td id="col-product">Produit</td>
             <td>Quantité/mois</td>
-            <td>Sous-total</td>
+            <td id="col-price">Sous-total</td>
           </tr>
           <tr>
             <td>Fraises</td>
-            <td>4x1</td>
-            <td>19,96</td>
+            <td class="monthly-quantity">4x1</td>
+            <td class="monthly-subtotal">19,96€</td>
           </tr>
-          <tr>
+          <tr clacc="table-headers">
             <td>Hamon d'España</td>
-            <td>1</td>
-            <td>1254,87€</td>
+            <td class="monthly-quantity">1</td>
+            <td class="monthly-subtotal">1254,87€</td>
           </tr>
         </tbody>
       </table>
+      <hr>
+      <div class="total-cart">
+        <p>2 références, 5 produits</p>
+        <p id="total">347,68€</p>
+      </div>
     </div>
   </div>
 
