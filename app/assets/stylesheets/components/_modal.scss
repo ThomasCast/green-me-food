@@ -27,54 +27,80 @@
   animation-duration: 0.4s
 }
 
+.display {
+  display: block;
+}
+
 /* Modal Content */
 .modal-content {
   background-color: #FAF2E5;
   margin: auto;
-  padding: 20px;
   border-radius: 8px;
-  width: 45%;
+  width: 25%;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
   animation-name: slideIn;
   animation-duration: 0.4s;
-
-}
-
-.modal-body {
-  padding: 2px 16px;
-
-  h3 {
-    color: #102D2D;
-  }
-
-  p {
-    color: #102D2D;
-  }
-}
-
-/* The Close Button */
-.close {
-  color: #102D2D;
-  opacity: 0.5;
-  float: right;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #102D2D;
-  text-decoration: none;
-  cursor: pointer;
+  
 }
 
 .modal-header {
   padding: 2px 16px;
-  height: 100px;
-  background-image: url(https://images.unsplash.com/photo-1610832958506-aa56368176cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
-
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 90px;
+  border-radius: 8px 8px 0 0;
 }
+
+.modal-image img {
+  display: block;
+  position:absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 20px solid #FAF2E5;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  h3 {
+    color: #102D2D;
+    text-align: center;
+  }
+  p {
+    margin-top: 20px;
+    color: #102D2D;
+    text-align: center;
+  }
+}
+
+.producer {
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 /* Add Animation */
 @-webkit-keyframes slideIn {
