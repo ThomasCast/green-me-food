@@ -27,12 +27,16 @@
   animation-duration: 0.4s
 }
 
+.display {
+  display: block;
+}
+
 /* Modal Content */
 .modal-content {
   background-color: #FAF2E5;
   margin: auto;
   border-radius: 8px;
-  width: 30%;
+  width: 25%;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
   animation-name: slideIn;
@@ -46,7 +50,8 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 90px;
+  border-radius: 8px 8px 0 0;
 }
 
 .modal-image img {
@@ -71,6 +76,7 @@
     text-align: center;
   }
   p {
+    margin-top: 20px;
     color: #102D2D;
     text-align: center;
   }
@@ -82,16 +88,15 @@
 
 /* The Close Button */
 .close {
-  color: #102D2D;
-  opacity: 0.5;
+  color: black;
   float: right;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 45px;
+  font-weight: bolder;
 }
 
 .close:hover,
 .close:focus {
-  color: #102D2D;
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }

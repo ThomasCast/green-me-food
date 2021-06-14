@@ -16,7 +16,7 @@
       <div class="<%= card_classes %>" data-product-id="<%= product.id %>" data-category-id="<%= product.category.id %>">
         <div class="card-front" style="background-image: url(<%= image_url(product.photo_url) %>)"></div>
         <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url(<%= image_url(product.photo_url) %>) ">
-          <div id="myproducer" class="producer">
+          <div id="myproducer" class="producer" data-producer-id="<%= product.producer.id %>">
             <div class="producer-img"><%= image_tag(product.producer.photo_url) %></div>
             <p><%= product.producer.name %>, producteur</p>
           </div>
@@ -49,8 +49,8 @@
 </div>
 
 <% @products.each do |product| %>
-  <div id="myModal" class="modal">
-    <div class="modal-content">
+  <div id="myModal" class="modal" data-producer-id="<%= product.producer.id %>">
+    <div class="modal-content" >
       <div class="modal-header" style="background-image: url(<%= image_url(product.photo_url) %>)">
       <span class="close">&times;</span>
       </div>
