@@ -8,8 +8,8 @@ class CartItemsController < ApplicationController
   
     if @cart_item.save
       respond_to do |format|
-        format.html { redirect_to cart_path  }
-        format.js { render :create}
+        format.html { redirect_to cart_path }
+        format.js { render :create }
       end
     end
   end

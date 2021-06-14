@@ -8,8 +8,6 @@
       <div class="card-front" style="background-image: url(<%= image_url(product.photo_url) %>) "></div>
       <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)),url(<%= image_url(product.photo_url) %>) ">
 
-<!-- ADD LINK TO PRODUCER PROFILE PAGE -->
-
         <div class="producer" >
           <div class="producer-img"><%= image_tag(product.producer.photo_url) %></div>
           <p><%= product.producer.name %>, producteur</p>
@@ -24,8 +22,6 @@
               <p><%= product.producer.location %></p>
             </div>
           </div>
-
-<!-- ADD LINK "ADD TO CART" -->
 
           <i class="fas fa-shopping-basket"></i>
         </div>

@@ -32,14 +32,19 @@
                 <i class="fas fa-location-arrow"></i>
                 <p><%= product.producer.location %></p>
               </div>
-              <div class="added-to-cart-btn"><%= image_tag("checked.svg") %></div>
+              <!-- <div class="added-to-cart-btn"><%# image_tag("checked.svg") %></div> -->
+              <!-- COMMENTE CAR REDONDANT A LA LIGNE 44-46 -->
             </div>
           </div>
           <div class="cart-form">
             <%= simple_form_for([ product, CartItem.new(product: product) ], remote: true) do |f| %>
               <%= f.input :product_id, as: :hidden %>
-              <%= f.button :submit, class: "fas fa-shopping-basket" %>
-              <%# <i class="fas fa-shopping-basket"></i> %>
+
+
+                <%= button_tag(type: 'submit', class: "add-to-cart") do %>
+                  <%= icon('fas', 'shopping-bag') %>
+                <% end %>
+
             <% end %>
           </div>
           <div class="added-to-cart-btn"><%= image_tag "checked" %></div>
