@@ -46,6 +46,9 @@
   }
 }
 
+.card-hidden {
+ display: none;
+}
 
 .card-front {
   height: 100%;
@@ -115,7 +118,7 @@
   flex-wrap: wrap;
   min-width: 800px;
   margin: 0 auto;
-
+  justify-content: center;
 }
 
 .product {

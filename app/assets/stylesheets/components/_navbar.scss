@@ -18,10 +18,26 @@
 }
 
 .nav-item img {
-  margin-left: 30px;
-  width: 45px;
+  margin-left: 20px;
+  width: 40px;
+}
+
+#shopping-cart-icon {
+  width: 44px;
+}
+
+#messages-icon {
+  width: 42px;
 }
 
 #navbarDropdown {
   margin-right: 50px;
+}
+
+.dropdown-menu {
+  background-color: #FAF2E5;
+  color: #102D2D;
+  font-family: $body-font;
+  border: 1px solid #102D2D;
+  border-radius: 8px;
 }
