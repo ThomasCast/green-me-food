@@ -1,11 +1,35 @@
 <div class="container">
-      <h1>Livraison</h1>
-      <form novalidate="novalidate" class="simple_form search" action="/delivery" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="Search" />
-        <div class="search-form-control form-group">
-          <input class="form-control string required" type="text" name="query" id="query" placeholder="Search by city or service..." />
-          <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </form>
+  <h1>Livraison</h1>
+  <div class ="info col-6">
+    <div class="list">
+      <p>Mode de livraison:</p>
+      <div class="custom-select">
+        <select>
+          <option value="0">Selectionnez le type de livraison:</option>
+          <option value="1">Livraison standard 4/5 jours (Gratuit)</option>
+          <option value="2">Livraison en point Relais 2/3 jours (+4.50€)</option>
+          <option value="3">Livraison Express 24h (+8.90€)</option>
+        </select>
+      </div>
+    </div>
+    <div class="address">
+      <p>Adresse:</p>
+      <div id="geocoder"></div>
+      </div>
+    </div>
+    <div>
+      <div id="map" style="width: 700px; height: 350px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
   </div>
+  <div class ="recap col-6">
+      <div id="map" style="width: 700px; height: 350px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>
+
