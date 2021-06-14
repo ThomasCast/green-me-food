@@ -5,7 +5,7 @@ class CartItemsController < ApplicationController
     @cart_item = CartItem.new(cart_item_params)
     @product = @cart_item.product
     @cart_item.user = current_user
-  
+
     if @cart_item.save
       respond_to do |format|
         format.html { redirect_to cart_path  }
@@ -24,6 +24,11 @@ class CartItemsController < ApplicationController
     @cart_item = CartItem.find(params[:id])
     @cart_item.destroy
     redirect_to cart_path
+  end
+
+
+  def cart
+    @cart_items =  current_user.cart_items
   end
 
   private
