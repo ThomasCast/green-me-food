@@ -28,6 +28,7 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { filterCategories } from '../components/category';
+import { initSortable } from '../components/init_sortable';
 import { modalPopUp } from '../components/modal';
 import { filterProducers } from '../components/producer';
 
@@ -35,8 +36,8 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   filterCategories();
+  initSortable();
   modalPopUp();
   filterProducers();
-  
 });
 
