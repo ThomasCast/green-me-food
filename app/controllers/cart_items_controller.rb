@@ -19,7 +19,7 @@ class CartItemsController < ApplicationController
     @cart_item.update(cart_item_params)
     respond_to do |f|
       f.html { redirect_to cart_path }
-      f.js 
+      f.js
     end
     # redirect_to cart_path
   end
@@ -38,7 +38,7 @@ class CartItemsController < ApplicationController
     @cart_item.destroy
      respond_to do |f|
       f.html { redirect_to cart_path }
-      f.js 
+      f.js
     end
   end
 
@@ -48,7 +48,7 @@ class CartItemsController < ApplicationController
     @once_cart_items = @cart_items.where(buying_frequency: 1)
     @weekly_cart_items = @cart_items.where(buying_frequency: 4)
     @biweekly_cart_items = @cart_items.where(buying_frequency: 2)
-    @monthly_cart_items = @cart_items.where(buying_frequency: 1)
+    @monthly_cart_items = @cart_items.where(buying_frequency: 0)
   end
 
   private
