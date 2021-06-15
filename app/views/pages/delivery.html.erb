@@ -45,8 +45,26 @@
       </div>
     </div>
   </div>
-  <div class="navigation-buttons" id="right-align">
-    <%= link_to "Valider la commande  >", delivery_path, class: "btn-yellow"%>
+  <div class="d-flex flex-row justify-content-between">
+    <div class="navigation-buttons" id="left-align">
+      <%= link_to "<  Retour au panier", cart_path, class: "btn-yellow"%>
+    </div>
+    <div class="navigation-buttons" id="right-align">
+      <button id="myBtn" class="btn-yellow">Valider ma commande  ></button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-success" class="modal-success">
+  <div class="modal-content-success">
+    <span class="close-success">&times;</span>
+    <div class="modal-image-success">
+      <%= image_tag('Success.png') %>
+    </div>
+    <div class="modal-body-success">
+      <h3>Succès!</h3>
+      <p>Votre commande a bien été validée</p>
+    </div>
   </div>
 </div>
 

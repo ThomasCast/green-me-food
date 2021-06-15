@@ -122,8 +122,13 @@
   </div>
 </div>
 <div class="container">
-  <div class="navigation-buttons" id="right-align">
-    <%= link_to "Choisir son créneau  >", delivery_path, class: "btn-yellow"%>
+  <div class="d-flex flex-row justify-content-between">
+    <div class="navigation-buttons" id="left-align">
+      <%= link_to "<  Retour aux catégories", categories_path, class: "btn-yellow"%>
+    </div>
+    <div class="navigation-buttons" id="right-align">
+      <%= link_to "Choisir son créneau  >", delivery_path, class: "btn-yellow"%>
+    </div>
   </div>
 </div>
 
