@@ -1,5 +1,19 @@
 // Specific CSS for your home-page
 
+
+body {
+  overflow-x: hidden; /* Hide scrollbars */
+}
+
+.transparent-font {
+  color: transparant !important;
+}
+
+.container-home{
+  position: relative;
+  z-index: 10;
+}
+
 #slogan {
   font-family: $body-font;
   font-size: 24px;
@@ -7,8 +21,9 @@
 }
 
 .header {
-  margin-top: 25vh;
-  margin-bottom: 65vh;
+  // margin-top: 25vh;
+  margin-top: 484px;
+  margin-bottom: 45vh;
 }
 
 .brand {
@@ -43,7 +58,7 @@ padding-left: 28px;
   width: 75%;
   margin-left: 250px;
   margin-top: 80px;
-  margin: 80px 0px 180px 250px;
+  margin: 80px 0px 180px 350px;
   align-items: center;
 }
 
@@ -75,6 +90,7 @@ padding-left: 28px;
     height: 300px;
     object-fit: cover;
     border-radius: 8px;
+    margin: -40px 30px;
     box-shadow: 8px 5px 20px 0px rgba(0, 0, 0, 0.1);
   }
 }
@@ -91,11 +107,11 @@ padding-left: 28px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 28px;
 }
 
 .bottom {
 margin-bottom: 120px;
+text-align: right;
 }
 
 // arrow
@@ -107,17 +123,17 @@ margin-bottom: 120px;
   top: 90vh;
   position: fixed;
   a {
-    color: white;
+    color: $beige;
     text-decoration: none;
     font-weight: 50px;
   }
 }
 
 .bounce {
-  -moz-animation: bounce 8s 1;
-  -webkit-animation: bounce 8s 1;
-  animation: bounce s 1;
-  animation-delay: 1.5s;
+  -moz-animation: bounce 10s forwards;
+  -webkit-animation: bounce 10s forwards;
+  animation: bounce 18s forwards;
+  animation-delay: 5s;
 }
 
 
@@ -138,9 +154,7 @@ margin-bottom: 120px;
   }
   100% {
     opacity: 0;
-    visibility: hidden;
     display:none;
-    overflow:hidden
   }
 }
 
