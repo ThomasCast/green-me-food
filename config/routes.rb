@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :cart_items, only: [:create]
   end
   resources :cart_items, only: [:update, :destroy]
+  post 'cart_items/:id/update_frequency/:frequency', to: "cart_items#update_frequency"
 end

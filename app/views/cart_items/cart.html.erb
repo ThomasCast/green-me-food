@@ -4,40 +4,17 @@
   <div class="articles col-5">
     <h2>Vos articles</h2>
 
-    <ul class="unassigned-articles drag-card-unassigned">
-      <li class="selected-items">
-        <table class="cart-table">
-          <tbody>
-            <tr class="table-headers">
-              <td id="col-product-up">Produit</td>
-              <td id="col-quantity">Quantité</td>
-              <td id="col-price-up">Prix à l'unité</td>
-              <!--<td id="col-total">Total</td>-->
-            </tr>
-          </tbody>
-        </table>
-      </li>
-        <% @cart_items.each do |item| %>
-          <li class="selected-items">
-            <table class="cart-table">
-              <tbody>
-                <tr class="list-item">
-                  <td class="item-description">
-                    <p><%= item.product.name %></p>
-                    <%= cl_image_tag(item.product.photo_url) %>
-                  </td>
-                  <td class="item-quantity">-  1  +  <i class="far fa-trash-alt"></i></td>
-                  <td class="item-single-price"><%= item.product.price %>€</td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-        <% end %>
-    </ul>
+    <div class="frequency-choice">
+      <h3>Juste cette fois-ci</h3>
+      <ul class="cart-list once-articles drag-card-unassigned">
+       <%= render 'cart_items/cart_table', items: @once_cart_items %>
+      </ul>
+    </div>
     <div class="monthly-total">
       <h3>Total pour Juin</h3>
       <hr>
       <div class="total-cart">
+        <p><%= current_user.total_cart %> €</p>
       </div>
     </div>
   </div>
@@ -46,35 +23,32 @@
   <div class="frequency-col col-5">
     <h2>Fréquence de livraison</h2>
 
+    
+
     <div class="frequency-choice">
-      <h3>Juste cette fois-ci</h3>
-      <ul class=".drag-card-assigned-1">
-        <li>
-          <table>
-          </table>
-        </li>
+      <h3>Toutes les semaines</h3>
+      <ul class="cart-list weekly-articles" data-frequency="4">
+
+       <%= render 'cart_items/cart_table', items: @weekly_cart_items %>
       </ul>
       <hr>
     </div>
 
     <div class="frequency-choice">
-      <h3>Toutes les semaines</h3>
-      <div class="grab-cart" id="">
-      </div>
-      <hr>
-    </div>
-
-    <div class="frequency-choice">
       <h3>Toutes les deux semaines</h3>
-      <div class="grab-cart">
-      </div>
+      <ul class="cart-list biweekly-articles" data-frequency="2">
+
+       <%= render 'cart_items/cart_table', items: @biweekly_cart_items %>
+      </ul>
       <hr>
     </div>
 
     <div class="frequency-choice">
       <h3>Tous les mois</h3>
-      <div class="grab-cart">
-      </div>
+      <ul class="cart-list monthly-articles" data-frequency="1">
+
+       <%= render 'cart_items/cart_table', items: @monthly_cart_items %>
+      </ul>
       <hr>
     </div>
   </div>
