@@ -1,18 +1,42 @@
-.list {
-  display: flex;
-  flex-direction: row;
+.infos p {
+  margin: 10px 0;
 }
 
-
-.address {
-  display: flex;
-  flex-direction: row;
+#geocoder {
+  margin: 15px 0;
 }
 
-.list p {
-  margin-right: 20px;
-} 
+.checkout {
+  background-color: #FAF2E5;
+  border-radius: 8px;
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  min-height: 92%;
+  margin-top: 47px;
+}
 
-.address p {
-  margin-right: 20px;
+.checkout h3 {
+  color: #102D2D;
+  font-size: 32px;
+  padding: 20px;
+  text-align: center;
+}
+
+.p-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 40px;
+
+  p {
+    color: #102D2D;
+    font-weight: 700;
+  }
+}
+
+.mapboxgl-ctrl-geocoder {
+  width: 1000px !important;
+  max-width: 100% !important;
+  background-color: #FAF2E5 !important;
 }
