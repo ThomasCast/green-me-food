@@ -33,7 +33,6 @@
             </table>
           </li>
         <% end %>
-              <!-- <td class="item-total-price">1200,99€</td> -->
     </ul>
     <div class="monthly-total">
       <h3>Total pour Juin</h3>
@@ -49,8 +48,13 @@
 
     <div class="frequency-choice">
       <h3>Juste cette fois-ci</h3>
-      <div class="grab-cart">
-      </div>
+      <ul class=".drag-card-assigned-1">
+        <li>
+          <table>
+            <%= render "cart", cart_items: @cart_items %>
+          </table>
+        </li>
+      </ul>
       <hr>
     </div>
 

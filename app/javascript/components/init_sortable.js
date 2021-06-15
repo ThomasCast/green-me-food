@@ -6,11 +6,11 @@ const initSortable = () => {
     group: 'list',
     animation: 150
   })
-  // const list_2 = document.querySelector('.grab-cart-2');
-  // Sortable.create(list_2, {
-  //   group: 'list',
-  //   animation: 150
-  // })
+  const list_2 = document.querySelector('.drag-card-assigned-1');
+  Sortable.create(list_2, {
+    group: 'list',
+    animation: 150
+  })
 
 };
 
