@@ -49,7 +49,7 @@
   </div>
   <div class="navigation-buttons">
     <%= link_to '^ Haut de page', categories_path, class: "btn-yellow" %>
-    <%= link_to "Afficher mon panier  >", cart_path, class: "btn-yellow" %>
+    <%= link_to "Afficher mon panier (#{CartItem.count}) >",cart_path, class: "btn-yellow" %>
   </div>
 
 </div>

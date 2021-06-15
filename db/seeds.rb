@@ -8,6 +8,7 @@
 
 puts "Cleaning database..."
 
+CartItem.destroy_all
 Product.destroy_all
 Category.destroy_all
 User.destroy_all
