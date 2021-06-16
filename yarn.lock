@@ -7288,19 +7288,17 @@ sort-keys@^1.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
-<<<<<<< HEAD
 sort-keys@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-2.0.0.tgz#658535584861ec97d730d6cf41822e1f56684128"
   integrity sha1-ZYU1WEhh7JfXMNbPQYIuH1ZoQSg=
   dependencies:
     is-plain-obj "^1.0.0"
-=======
+
 sortablejs@^1.13.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/sortablejs/-/sortablejs-1.13.0.tgz#3ab2473f8c69ca63569e80b1cd1b5669b51269e9"
   integrity sha512-RBJirPY0spWCrU5yCmWM1eFs/XgX2J5c6b275/YyxFRgnzPhKl/TDeU2hNR8Dt7ITq66NRPM4UlOt+e5O4CFHg==
->>>>>>> master
 
 source-list-map@^2.0.0:
   version "2.0.1"
