@@ -60,7 +60,9 @@
   </div>
   <div class="navigation-buttons">
     <%= link_to '^ Haut de page', categories_path, class: "btn-yellow" %>
-    <%= link_to "Afficher mon panier (#{CartItem.count}) >",cart_path, class: "btn-yellow" %>
+    <% if current_user.cart_items.count > 0  %>
+      <%= link_to "Afficher mon panier (#{current_user.cart_items.count}) >",cart_path, class: "btn-yellow", id: "cart-button"%>
+    <% end  %>
   </div>
 
 </div>
