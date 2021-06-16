@@ -85,6 +85,12 @@
   background-color: #F1E0B0;
   text-align: center;
   text-decoration: none;
+    &:hover {
+    text-decoration: none;
+    background-color: $beige;
+    color: $green;
+  //  transform: scale(1.2, 1.05);
+  }
 }
 
 .btn-yellow-delivery {
@@ -97,4 +103,10 @@
   background-color: #F1E0B0;
   text-align: center;
   text-decoration: none;
+    &:hover {
+    text-decoration: none;
+    background-color: $beige;
+    color: $green;
+  //  transform: scale(1.2, 1.05);
+  }
 }
