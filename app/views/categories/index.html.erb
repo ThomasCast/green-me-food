@@ -47,7 +47,8 @@
     <% end %>
   </div>
   <div class="navigation-buttons" id="right-align">
-    <%= link_to "Afficher mon panier  >", cart_path, class: "btn-yellow" %>
+    <%= link_to "Afficher mon panier (#{CartItem.count}) >",cart_path, class: "btn-yellow" %>
+
   </div>
 
 </div>
