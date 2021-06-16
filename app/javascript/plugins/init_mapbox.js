@@ -14,17 +14,26 @@ const initMapbox = () => {
     });
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
-      new mapboxgl.Marker()
-        .setLngLat([marker.lng, marker.lat])
-        .addTo(map);
+      const popup = new mapboxgl.Popup().setHTML(marker.info_window);
+      const element = document.createElement('div');
+      element.className = 'marker';
+      element.style.backgroundImage = `url('${marker.image_url}')`;
+      element.style.backgroundSize = 'contain';
+      element.style.width = '30px';
+      element.style.height = '30px';
+      new mapboxgl.Marker(element)
+      .setLngLat([marker.lng, marker.lat])
+      .setPopup(popup)
+      .addTo(map);
     });
     const geocoder = new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl
+      accessToken: mapboxgl.accessToken,
+      mapboxgl: mapboxgl
     });
- 
-  document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+    
+    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
   };
 };
 
 export { initMapbox };
+
