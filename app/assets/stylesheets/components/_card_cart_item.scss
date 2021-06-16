@@ -15,7 +15,7 @@
 }
 
 .cart {
- max-width: 600px;
+  max-width: 600px;
 }
 
 .table-headers {
@@ -47,6 +47,10 @@
   padding: 8px 12px;
 }
 
+.cart-list {
+  list-style-type: none;
+}
+
 .selected-items {
   display: flex;
   align-content: flex-start;
@@ -71,15 +75,16 @@
     height: 60px;
     object-fit: cover;
     border-radius: 4px;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   }
 }
 
 .cart-item {
   .item-total-price {
-    text-weight: bold;
+    font-weight: bold;
   }
-  .item-quantity, .item-total-price {
+  .item-quantity,
+  .item-total-price {
     text-align: center;
   }
   .item-single-price {
@@ -88,14 +93,16 @@
   }
   &:hover {
     background-color: $yellow;
-    transition: .4s;
+    transition: 0.4s;
   }
 }
 
-
-td {
-    font-family: $body-font;
-    font-size: 18px;
-    color: $green;
+.grab-cart {
+  cursor: grab;
 }
 
+td {
+  font-family: $body-font;
+  font-size: 18px;
+  color: $green;
+}
