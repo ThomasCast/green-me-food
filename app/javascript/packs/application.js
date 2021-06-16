@@ -24,6 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -31,9 +32,9 @@ import { filterCategories } from '../components/category';
 import { initSortable } from '../components/init_sortable';
 import { modalPopUp } from '../components/modal';
 import { filterProducers } from '../components/producer';
+import { dropdownList } from '../components/dropdown';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
-import { dropdownList } from '../components/dropdown';
 import { modalSuccess } from '../components/modal_success';
 
 document.addEventListener('turbolinks:load', () => {
