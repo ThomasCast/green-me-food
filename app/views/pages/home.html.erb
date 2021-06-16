@@ -1,52 +1,85 @@
-<div class="container">
 
-  <div>
-    <div class="home-page-top">
-      <h1>Green Me Food.</h1>
-      <a href="/categories" class="btn-yellow-home-page">Découvrez votre région</a>
-    </div>
-    <div>
-      <h3 id="slogan">Bring local, organic and quality products to your home.</h3>
-    </div>
+
+  <!-- ANIMATIONS -->
+  <div class="animation-strawberries">
+    <div id="straw-1" class="img-format"><%= image_tag "fraise1.png" %></div>
+    <div id="straw-2" class="img-format-big"><%= image_tag "fraise2.png" %></div>
+    <div id="straw-3" class="img-format-big"><%= image_tag "fraise3.png" %></div>
+    <div id="straw-4" class="img-format-big"><%= image_tag "fraise4.png" %></div>
+    <div id="straw-5" class="img-format-big"><%= image_tag "fraise5.png" %></div>
+    <div id="straw-6" class="img-format-big"><%= image_tag "fraise6.png" %></div>
+    <!-- <div id="straw-7" class="img-format-big"><%# image_tag "fraise7.png" %></div> -->
   </div>
 
-  <div class="description-1">
-    <div class="img-persona">
-    <%= image_tag"persona-1-home.svg", class: "persona-img" %>
-    </div>
-    <div class="txt-description">
-    <h3>Des produits locaux et de qualité</h3>
-    <p>Paragraph: Hover over the Google web fonts from the list on the right and click to select. Use the top right toggle to change the heading or body font family. Click the
-    download icon to view in Google fonts.</p>
-    </div>
+  <div class="arrow bounce">
+    <a class="fa fa-arrow-down fa-2x" href="#"></a>
   </div>
 
-  <div class="description-2">
-    <div class="img-persona">
-    <%= image_tag"persona-2-home.svg", class: "persona-img" %>
+  <div class="container container-home">
+
+    <div class="header">
+      <div class="brand">
+        <h1>Green Me Food.</h1>
+
+      </div>
+        <h3 id="slogan">Trouvez des produits locaux, bio et de qualité autour de vous.</h3>
+        <a href="/categories" class="btn-yellow-home-page">Découvrez votre région</a>
     </div>
-    <div class="txt-description">
-    <h3>Des producteurs mieux rémunérés</h3>
-    <p>Paragraph: Hover over the Google web fonts from the list on the right and click to select. Use the top right toggle to change the heading or body font family. Click the
-    download icon to view in Google fonts.</p>
+
+    <div id="description-1">
+      <%= image_tag"persona-1-home.svg", class: "persona-img" %>
+      <div class="txt-description">
+      <h3>Des produits locaux et de qualité</h3>
+      <p>Paragraph: Hover over the Google web fonts from the list on the right and click to select. Use the top right toggle to change the heading or body font family. Click the
+      download icon to view in Google fonts.</p>
+      </div>
+    </div>
+
+    <div id="description-2">
+      <%= image_tag"persona-2-home.svg", class: "persona-img" %>
+      <div class="txt-description">
+      <h3>Des producteurs mieux rémunérés</h3>
+      <p>Paragraph: Hover over the Google web fonts from the list on the right and click to select. Use the top right toggle to change the heading or body font family. Click the
+      download icon to view in Google fonts.</p>
+      </div>
+    </div>
+
+    <div id="description-3">
+      <%= image_tag"persona-3.svg", class: "persona-img" %>
+      <div class="txt-description">
+      <h3>Une livraison en toute confiance</h3>
+      <p>Paragraph: Hover over the Google web fonts from the list on the right and click to select. Use the top right toggle to change the heading or body font family. Click the
+      download icon to view in Google fonts.</p>
+      </div>
+    </div>
+
+
+    <div class="testimonials">
+      <h2>Ils l'ont adopté</h2>
+      <div class="testimonial" id="pic-left">
+        <img class="hover" src="https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2018/03/19/node_338529/39244268/public/2018/03/19/B9715047087Z.1_20180319121654_000%2BGKFASOGV5.2-0.jpg?itok=3QHi68vz1521458234" alt="">
+        <div class="description">
+          <h3>Sxitine, fabricante de savons</h3>
+          <p>C'est un vrai plaisir de vendre mes produits via Green Me Food. Maintenant,
+          les Marseillais sont enfin au courant que les savons de Marseille viennent du coin.
+          Merci Green Me!</p>
+          <a href="" class="btn-yellow-thin hover">Découvrez ses savons</a>
+        </div>
+      </div>
+
+      <div class="testimonial bottom" id="pic-right">
+        <img class="hover" src="https://lvdneng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2018/03/19/node_338529/39244268/public/2018/03/19/B9715047087Z.1_20180319121654_000%2BGKFASOGV5.2-0.jpg?itok=3QHi68vz1521458234" alt="">
+        <!-- <img src="https://unsplash.com/photos/aeh1dbI_a7I" alt=""> -->
+        <div class="description">
+          <h3>Corine, Greeneuse ponctuelle</h3>
+          <p>Ses savons sentent pas la rose! Enfin rien d'étonnant puisque c'est du
+          savon de Marseille. Grâce à Six, je me sens enfin propre et ça faisait
+          sacrèment longtemps. Merci Green Me! </p>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="description-3">
-    <div class="img-persona">
-    <%= image_tag"persona-3.svg", class: "persona-img" %>
-    </div>
-    <div class="txt-description">
-    <h3>Une livraison en toute confiance</h3>
-    <p>Paragraph: Hover over the Google web fonts from the list on the right and click to select. Use the top right toggle to change the heading or body font family. Click the
-    download icon to view in Google fonts.</p>
-    </div>
-  </div>
-
-<!--   <a href="#" class="btn-yellow">Yo</a><br>
-  <a href="#" class="btn-yellow">Découvrez votre région, Découvrez votre région</a> -->
 
 
 
 </div>
-

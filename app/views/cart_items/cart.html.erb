@@ -29,7 +29,7 @@
       <h3>Toutes les semaines</h3>
       <ul class="cart-list weekly-articles" data-frequency="4" style="padding-left: 0px">
 
-       <%= render 'cart_items/cart_table', items: @weekly_cart_items %>
+        <%= render 'cart_items/cart_table', items: @weekly_cart_items %>
       </ul>
       <hr>
     </div>
@@ -38,7 +38,7 @@
       <h3>Toutes les deux semaines</h3>
       <ul class="cart-list biweekly-articles" data-frequency="2" style="padding-left: 0px">
 
-       <%= render 'cart_items/cart_table', items: @biweekly_cart_items %>
+        <%= render 'cart_items/cart_table', items: @biweekly_cart_items %>
       </ul>
       <hr>
     </div>
@@ -47,17 +47,20 @@
       <h3>Tous les mois</h3>
       <ul class="cart-list monthly-articles" data-frequency="1" style="padding-left: 0px">
 
-       <%= render 'cart_items/cart_table', items: @monthly_cart_items %>
+        <%= render 'cart_items/cart_table', items: @monthly_cart_items %>
       </ul>
       <hr>
     </div>
   </div>
 </div>
-
-
 <div class="container">
-  <div class="navigation-buttons" id="right-align">
-    <%= link_to "Procéder au paiement  >", cart_path, class: "btn-yellow"%>
+  <div class="d-flex flex-row justify-content-between">
+    <div class="navigation-buttons" id="left-align">
+      <%= link_to "<  Retour aux catégories", categories_path, class: "btn-yellow"%>
+    </div>
+    <div class="navigation-buttons" id="right-align">
+      <%= link_to "Choisir son créneau  >", delivery_path, class: "btn-yellow"%>
+    </div>
   </div>
 </div>
 
