@@ -31,6 +31,10 @@ import { filterCategories } from '../components/category';
 import { initSortable } from '../components/init_sortable';
 import { modalPopUp } from '../components/modal';
 import { filterProducers } from '../components/producer';
+import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initMapbox } from '../plugins/init_mapbox';
+import { dropdownList } from '../components/dropdown';
+import { modalSuccess } from '../components/modal_success';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -39,5 +43,9 @@ document.addEventListener('turbolinks:load', () => {
   initSortable();
   modalPopUp();
   filterProducers();
+  initAutocomplete();
+  initMapbox();
+  dropdownList();
+  modalSuccess();
 });
 

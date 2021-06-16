@@ -4,4 +4,13 @@ class PagesController < ApplicationController
   def home
   end
 
+  def delivery
+    @users = User.all
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude
+      }
+    end
+  end
 end
