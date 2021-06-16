@@ -5,10 +5,6 @@ body {
   overflow-x: hidden; /* Hide scrollbars */
 }
 
-.transparent-font {
-  color: transparant !important;
-}
-
 .container-home{
   position: relative;
   z-index: 10;
@@ -18,11 +14,12 @@ body {
   font-family: $body-font;
   font-size: 24px;
   color: $beige;
+  margin-bottom: 60px;
 }
 
 .header {
   // margin-top: 25vh;
-  margin-top: 484px;
+  margin-top: 280px;
   margin-bottom: 45vh;
 }
 
@@ -31,7 +28,7 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 
 .txt-description {
@@ -124,15 +121,19 @@ text-align: right;
   position: fixed;
   a {
     color: $beige;
+    opacity: 0.7;
     text-decoration: none;
     font-weight: 50px;
+
   }
 }
 
 .bounce {
+  animation: bounce 18s forwards;
   -moz-animation: bounce 10s forwards;
   -webkit-animation: bounce 10s forwards;
-  animation: bounce 18s forwards;
+  -o-animation: bounce 10s forwards; /* opera */
+  -ms-animation: bounce 10s forwards; /* IE 10 */
   animation-delay: 5s;
 }
 
