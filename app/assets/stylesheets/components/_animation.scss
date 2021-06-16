@@ -23,7 +23,7 @@
 
 #straw-1 img {
   position: absolute;
-  bottom: 8%;
+  bottom: 12%;
   right: -220px;
   animation: straw1-fall 8s ease-in-out infinite;
   -moz-animation: straw1-fall 8s ease-in-out infinite;
@@ -130,7 +130,7 @@
   }
 
   82% {
-    transform: translateX(12%) translateY(-10%) rotate(-21deg);
+    transform: translateX(-19%) translateY(-10%) rotate(-21deg);
   }
 }
 
@@ -167,7 +167,7 @@
   }
 
   82% {
-    transform: translateX(-90%) translateY(20%) rotate(-39deg);
+    transform: translateX(-90%) translateY(-19%) rotate(-67deg);
   }
 
 }
@@ -187,7 +187,7 @@
   }
 
   82% {
-    transform: translateX(-139%) translateY(38%) rotate(-34deg);
+    transform: translateX(-139%) translateY(-16%) rotate(-70deg);
   }
 
 }
@@ -202,11 +202,11 @@
   }
 
   45% {
-    transform: translateX(-200%) translateY(89%) rotate(-102deg);
+    transform: translateX(-200%) translateY(71%) rotate(-102deg);
   }
 
   82% {
-    transform: translateX(-170%) translateY(45%) rotate(-45deg);
+    transform: translateX(-202%) translateY(-44%) rotate(-45deg);
   }
 
 }
