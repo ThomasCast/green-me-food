@@ -1,6 +1,8 @@
 <div class="container">
   <h1>Categories</h1>
+  <br>
     <section class="carousel">
+      <h3>Produits frais</h3>
       <ul class="carousel-items">
         <% @categories_frais.each do |categorie_frais| %>
           <div class="col-12 col-sm-7 col-md-3">
@@ -13,6 +15,7 @@
       </ul>
     </section>
     <section class="carousel">
+      <h3>Produits ménagers</h3>
       <ul class="carousel-items">
         <% @categories_entretien.each do |categorie_entretien| %>
           <div class="col-12 col-sm-7 col-md-3">
@@ -24,7 +27,6 @@
         <% end %>
       </ul>
     </section>
-
 
   <div class="products">
     <% @products.each do |product| %>
