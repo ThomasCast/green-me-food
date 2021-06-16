@@ -1,0 +1,70 @@
+<div class="container">
+  <h1>Livraison</h1>
+  <div class="d-flex flex-row justify-content-between">
+    <div class ="infos col-6">
+      <div class="custom-list">
+        <p>Jour de livraison:</p>
+        <div class="custom-select">
+          <select>
+            <option value="0">Selectionnez le jour de livraison:</option>
+            <option value="1">Livraison le lundi</option>
+            <option value="2">Livraison le jeudi</option>
+          </select>
+        </div>
+        <p>Créneau horaire:</p>
+        <div class="custom-select">
+          <select>
+            <option value="0">Selectionnez l'horaire de livraison:</option>
+            <option value="1">entre 9h et 11h</option>
+            <option value="2">entre 14h et 17h</option>
+            <option value="3">entre 17h et 19h</option>
+            <option value="4">entre 19h et 21h</option>
+          </select>
+        </div>
+      </div>
+      <div class="address">
+        <p>Adresse:</p>
+        <div id="geocoder" class="geocoder"></div>
+      </div>
+      <div>
+        <div id="map" style="width: auto; height: 350px;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    </div>
+    <div class ="summary col-6">
+      <div class="checkout">
+        <h3>Récapulatif de votre commande</h3>
+        <div class="p-list">
+          <p>Produit</p>
+          <p>Quantité</p>
+          <p>Total</p>
+        </div>
+        <hr>       
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-row justify-content-between">
+    <div class="navigation-buttons" id="left-align">
+      <%= link_to "<  Retour au panier", cart_path, class: "btn-yellow"%>
+    </div>
+    <div class="navigation-buttons" id="right-align">
+      <button id="myBtn" class="btn-yellow">Valider ma commande  ></button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-success" class="modal-success">
+  <div class="modal-content-success">
+    <span class="close-success">&times;</span>
+    <div class="modal-image-success">
+      <%= image_tag('Success.png') %>
+    </div>
+    <div class="modal-body-success">
+      <h3>Succès!</h3>
+      <p>Votre commande a bien été validée</p>
+    </div>
+  </div>
+</div>
+
