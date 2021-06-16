@@ -1,0 +1,32 @@
+<li class="selected-items" id="cart-item-<%= item.id %>" data-auth-token="<%= form_authenticity_token %>">
+  <table class="cart-table">
+    <tbody>
+      <tr class="list-item">
+        <td class="item-description">
+          <p><%= item.product.name %></p>
+          <%= cl_image_tag(item.product.photo_url) %>
+        </td>
+        <td class="item-quantity d-flex align-items-center">
+        <% if item.quantity > 1 %>
+          <%= simple_form_for(item, remote: true) do |f| %>
+            <%= f.input :quantity, input_html: {value: f.object.quantity - 1}, as: :hidden %> 
+            <%= f.submit "-" %>
+          <% end %>
+        <% end %>
+          <%= item.quantity %>
+          <%= simple_form_for(item, remote: true)  do |f| %>
+            <%= f.input :quantity, input_html: {value: f.object.quantity + 1}, as: :hidden  %> 
+            <%= f.submit "+" %>
+          <% end %>
+        </td>
+        <td>
+        <%= link_to cart_item_path(item), method: :delete, remote: true do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+        </td>
+        <td class="item-single-price"><%= item.product.price %>€</td>
+        <td class="item-total-price"><%= item.product.price * item.quantity %>€</td>
+      </tr>
+    </tbody>
+  </table>
+</li>
