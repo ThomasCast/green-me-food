@@ -12,6 +12,8 @@
     </div>
     <div class="monthly-total">
       <h3>Total pour Juin</h3>
+      <%= render 'cart_items/total_cart_table', items: current_user.cart_items %>
+
       <hr>
       <div class="total-cart">
         <p><%= current_user.total_cart %> €</p>

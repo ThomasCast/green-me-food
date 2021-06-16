@@ -1,0 +1,15 @@
+<li class="selected-items" id="total-cart-item-<%= item.id %>" data-auth-token="<%= form_authenticity_token %>">
+  <table class="cart-table">
+    <tbody>
+      <tr class="list-item" style="display:flex; justify-content: space-between">
+        <td class="item-description" style="margin-right: 20px">
+          <p style="overflow: hidden; whithe-space: nowrap; text-overflow: clip;"><%= item.product.name %></p>
+        </td>
+          <td class="item-quantity">
+            <%= item.quantity %> unités : <%= item.buying_frequency %>/mois
+          </td>
+          <td class="item-total-price"><%= (item.product.price * item.quantity * item.buying_frequency).round(2) %>€</td>
+      </tr>
+    </tbody>
+  </table>
+</li>
