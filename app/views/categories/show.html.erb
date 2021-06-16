@@ -1,0 +1,31 @@
+<div class="container">
+
+
+  <h1>Products page</h1>
+  <div class="products">
+    <% @category.products.each do |product| %>
+    <div class="card-product preload-transitions">
+      <div class="card-front" style="background-image: url(<%= image_url(product.photo_url) %>) "></div>
+      <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)),url(<%= image_url(product.photo_url) %>) ">
+
+        <div class="producer" >
+          <div class="producer-img"><%= image_tag(product.producer.photo_url) %></div>
+          <p><%= product.producer.name %>, producteur</p>
+        </div>
+
+        <div class="product">
+          <div class="product-details">
+            <p class="price-quantity"><%= product.price %>€<%= product.description %></p>
+            <p class="product-name"><%= product.name %></p>
+            <div class="location">
+              <i class="fas fa-location-arrow"></i>
+              <p><%= product.producer.location %></p>
+            </div>
+          </div>
+
+          <i class="fas fa-shopping-basket"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> %> %>

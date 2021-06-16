@@ -10,3 +10,4 @@ if (document.querySelector("#cart-button")) {
   const cartButton = '<%= link_to "Afficher mon panier (#{current_user.cart_items.count}) >",cart_path, class: "btn-yellow", id: "cart-button"%>';
   document.querySelector(".navigation-buttons").insertAdjacentHTML("beforeend", cartButton)
 }
+
