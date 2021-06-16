@@ -37,6 +37,10 @@
           <div class="cart-form">
             <%= simple_form_for([ product, CartItem.new(product: product) ], remote: true) do |f| %>
               <%= f.input :product_id, as: :hidden %>
+
+                <%= button_tag(type: 'submit', class: "add-to-cart") do %>
+                  <%= icon('fas', 'shopping-bag') %>
+                <% end %>
               <%= f.button :submit, class: "btn btn-success" %>
               <%# <i class="fas fa-shopping-basket"></i> %>
             <% end %>
