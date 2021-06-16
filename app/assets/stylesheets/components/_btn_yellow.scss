@@ -75,3 +75,38 @@
   }
 }
 
+.btn-yellow-cart {
+  height: 68px;
+  font-size: 24px;
+  padding: 16px 40px;
+  margin: 50px 15px;
+  border-radius: 2px;
+  color: #102D2D;
+  background-color: #F1E0B0;
+  text-align: center;
+  text-decoration: none;
+    &:hover {
+    text-decoration: none;
+    background-color: $beige;
+    color: $green;
+  //  transform: scale(1.2, 1.05);
+  }
+}
+
+.btn-yellow-delivery {
+  height: 68px;
+  font-size: 24px;
+  padding: 16px 40px;
+  margin: 50px 15px;
+  border-radius: 2px;
+  color: #102D2D;
+  background-color: #F1E0B0;
+  text-align: center;
+  text-decoration: none;
+    &:hover {
+    text-decoration: none;
+    background-color: $beige;
+    color: $green;
+  //  transform: scale(1.2, 1.05);
+  }
+}

@@ -1,0 +1,25 @@
+.btn-add {
+  display: flex;
+  height: 40px;
+  font-size: 24px;
+  border: none;
+  background-color: $beige;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: baseline;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+}
+
+.item-single-price {
+  padding: 15px;
+  padding-top: 35px;
+}
+
+.item-total-price {
+  padding-top: 21px;
+}

@@ -1,66 +1,66 @@
-<h1 id="cart-title">Commande</h1>
+<div class="container">
+  <h1 id="cart-title">Commande</h1>
 
-<div class="container-cart">
-  <div class="articles col-5">
-    <h2>Vos articles</h2>
+  <div class="container-cart">
+    <div class="articles col-6">
+      <h2>Vos articles</h2>
 
-    <div class="frequency-choice">
-      <h3>Juste cette fois-ci</h3>
-      <ul class="cart-list once-articles drag-card-unassigned">
-        <%= render 'cart_items/cart_table', items: @once_cart_items %>
-      </ul>
+      <div class="frequency-choice">
+        <h3>Juste cette fois-ci</h3>
+        <ul class="cart-list once-articles drag-card-unassigned" style="padding-left: 0px">
+         <%= render 'cart_items/cart_table', items: @once_cart_items %>
+        </ul>
+      </div>
+      <div class="monthly-total">
+        <h3>Total pour Juin</h3>
+        <hr>
+        <div class="total-cart">
+          <p><%= current_user.total_cart %> €</p>
+        </div>
+      </div>
     </div>
-    <div class="monthly-total">
-      <h3>Total pour Juin</h3>
-      <hr>
-      <div class="total-cart">
-        <p><%= current_user.total_cart %> €</p>
+
+
+    <div class="frequency-col col-6">
+      <h2>Fréquence de livraison</h2>
+
+
+
+      <div class="frequency-choice">
+        <h3>Toutes les semaines</h3>
+        <ul class="cart-list weekly-articles" data-frequency="4" style="padding-left: 0px">
+
+          <%= render 'cart_items/cart_table', items: @weekly_cart_items %>
+        </ul>
+        <hr>
+      </div>
+
+      <div class="frequency-choice">
+        <h3>Toutes les deux semaines</h3>
+        <ul class="cart-list biweekly-articles" data-frequency="2" style="padding-left: 0px">
+
+          <%= render 'cart_items/cart_table', items: @biweekly_cart_items %>
+        </ul>
+        <hr>
+      </div>
+
+      <div class="frequency-choice">
+        <h3>Tous les mois</h3>
+        <ul class="cart-list monthly-articles" data-frequency="1" style="padding-left: 0px">
+
+          <%= render 'cart_items/cart_table', items: @monthly_cart_items %>
+        </ul>
+        <hr>
       </div>
     </div>
   </div>
-
-
-  <div class="frequency-col col-5">
-    <h2>Fréquence de livraison</h2>
-
-
-
-    <div class="frequency-choice">
-      <h3>Toutes les semaines</h3>
-      <ul class="cart-list weekly-articles" data-frequency="4">
-
-        <%= render 'cart_items/cart_table', items: @weekly_cart_items %>
-      </ul>
-      <hr>
-    </div>
-
-    <div class="frequency-choice">
-      <h3>Toutes les deux semaines</h3>
-      <ul class="cart-list biweekly-articles" data-frequency="2">
-
-        <%= render 'cart_items/cart_table', items: @biweekly_cart_items %>
-      </ul>
-      <hr>
-    </div>
-
-    <div class="frequency-choice">
-      <h3>Tous les mois</h3>
-      <ul class="cart-list monthly-articles" data-frequency="1">
-
-        <%= render 'cart_items/cart_table', items: @monthly_cart_items %>
-      </ul>
-      <hr>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="d-flex flex-row justify-content-between">
-    <div class="navigation-buttons" id="left-align">
-      <%= link_to "<  Retour aux catégories", categories_path, class: "btn-yellow"%>
-    </div>
-    <div class="navigation-buttons" id="right-align">
-      <%= link_to "Choisir son créneau  >", delivery_path, class: "btn-yellow"%>
-    </div>
-  </div>
+      <div class="d-flex flex-row justify-content-between">
+        <div class="navigation-buttons" id="left-align">
+          <%= link_to "<  Retour aux catégories", categories_path, class: "btn-yellow-cart"%>
+        </div>
+        <div class="navigation-buttons" id="right-align">
+          <%= link_to "Choisir son créneau  >", delivery_path, class: "btn-yellow-cart"%>
+        </div>
+      </div>
 </div>
 

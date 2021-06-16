@@ -55,8 +55,6 @@
                 <%= button_tag(type: 'submit', class: "add-to-cart") do %>
                   <%= icon('fas', 'shopping-bag') %>
                 <% end %>
-              <%= f.button :submit, class: "btn btn-success" %>
-              <%# <i class="fas fa-shopping-basket"></i> %>
             <% end %>
           </div>
           <div class="added-to-cart-btn"><%= image_tag "checked" %></div>
@@ -64,8 +62,8 @@
       </div>
     <% end %>
   </div>
-  
-  <div class="navigation-buttons">
+
+  <div class="navigation-buttons" id="right-align">
     <% if current_user.cart_items.count > 0  %>
       <%= link_to "Afficher mon panier (#{current_user.cart_items.count}) >",cart_path, class: "btn-yellow", id: "cart-button"%>
     <% end  %>
