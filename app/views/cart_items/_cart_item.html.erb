@@ -1,8 +1,8 @@
 <li class="selected-items" id="cart-item-<%= item.id %>" data-auth-token="<%= form_authenticity_token %>">
   <table class="cart-table">
     <tbody>
-      <tr class="list-item">
-        <td class="item-description">
+      <tr class="list-item" style="display:flex; justify-content: space-between">
+        <td class="item-description" style="margin-right: 20px">
           <p style="overflow: hidden; whithe-space: nowrap; text-overflow: clip;"><%= item.product.name %></p>
           <%= cl_image_tag(item.product.photo_url) %>
         </td>
@@ -27,7 +27,7 @@
           <% end %>
           </td>
           <td class="item-single-price"><%= item.product.price %>€</td>
-          <td class="item-total-price"><%= item.product.price * item.quantity %>€</td>
+          <td class="item-total-price"><%= (item.product.price * item.quantity).round(2)%>€</td>
       </tr>
     </tbody>
   </table>
