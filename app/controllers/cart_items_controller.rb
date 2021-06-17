@@ -26,9 +26,15 @@ class CartItemsController < ApplicationController
 
   def update_frequency
     @cart_item = CartItem.find(params[:id])
-    @cart_item.update(buying_frequency: params[:frequency].to_i)
+    if params[:frequency] == "undefined"
+      @cart_item.update(buying_frequency: 1)
+    else
+      @cart_item.update(buying_frequency: params[:frequency].to_i)
+    end
     render json: {
-      newTotal: current_user.total_cart
+      newTotal: current_user.total_cart,
+      newTotalLineId: "#total-cart-item-#{@cart_item.id}",
+      newTotalLineContent: render_to_string("cart_items/_total_cart_item.html", :formats => [:html], :layout => false, :locals => {:item => @cart_item})
     }
     # redirect_to cart_path
   end
