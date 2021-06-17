@@ -1,38 +1,61 @@
 // Specific CSS for your home-page
 
+
+body {
+  overflow-x: hidden; /* Hide scrollbars */
+}
+
+.container-home{
+  position: relative;
+  z-index: 10;
+}
+
 #slogan {
   font-family: $body-font;
   font-size: 24px;
   color: $beige;
+  margin-bottom: 60px;
 }
 
-.home-page-top {
+.header {
+  // margin-top: 25vh;
+  margin-top: 280px;
+  margin-bottom: 42vh;
+}
+
+.brand {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   align-items: center;
+  margin-bottom: 16px;
 }
 
-.description-1 {
+.txt-description {
+padding-left: 28px;
+}
+
+#description-1 {
   display: flex;
-  width: 900px;
-  margin-top: 50px;
+  width: 75%;
+  margin-top: 80px;
   align-items: center;
 }
 
-.description-2 {
+#description-2 {
   display: flex;
-  width: 900px;
-  margin-left: 100px;
-  margin-top: 50px;
+  width: 75%;
+  margin-left: 150px;
+  margin-top: 80px;
   align-items: center;
 }
 
-.description-3 {
+#description-3 {
   display: flex;
-  width: 900px;
-  margin-left: 200px;
-  margin-top: 50px;
+  width: 75%;
+  margin-left: 250px;
+  margin-top: 80px;
+  margin: 80px 0px 180px 350px;
   align-items: center;
 }
 
@@ -42,6 +65,97 @@
 // }
 
 .persona-img {
-  width: 200px;
+  width: 250px;
   height: 250px;
 }
+
+// testimonials
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+
+.testimonial {
+  display: flex;
+  margin-top: 90px;
+  img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: -40px 30px;
+    box-shadow: 8px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+#pic-right {
+  flex-direction: row-reverse;
+}
+
+#pic-left {
+  flex-direction: row;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottom {
+margin-bottom: 120px;
+text-align: right;
+}
+
+// arrow
+
+.arrow {
+  text-align: center;
+  position: absolute;
+  right: 50%;
+  top: 90vh;
+  position: fixed;
+  a {
+    color: $beige;
+    opacity: 0.7;
+    text-decoration: none;
+    font-weight: 50px;
+
+  }
+}
+
+.bounce {
+  animation: bounce 18s forwards;
+  -moz-animation: bounce 10s forwards;
+  -webkit-animation: bounce 10s forwards;
+  -o-animation: bounce 10s forwards; /* opera */
+  -ms-animation: bounce 10s forwards; /* IE 10 */
+  animation-delay: 5s;
+}
+
+
+
+@keyframes bounce {
+  0%, 6%, 16%, 26%, 33%, 39%, 49%, 59%, 66%, 72%, 82%, 92%, 99% {
+    transform: translateY(0);
+  }
+  12%, 45%, 78% {
+    transform: translateY(-30px);
+  }
+  20%, 53%, 86% {
+    transform: translateY(-15px);
+  }
+
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display:none;
+  }
+}
+

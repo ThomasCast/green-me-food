@@ -1,18 +1,32 @@
 <div class="container">
   <h1>Categories</h1>
+  <br>
     <section class="carousel">
+      <h3>Produits frais</h3>
       <ul class="carousel-items">
-        <% @categories.each do |category| %>
-          <div class="col-12 col-sm-7 col-md-3">
-              <div id="mycategory" class="card-category" data-category-id="<%= category.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(category.photo_url) %>)">
-                <%= category.name %>
+        <% @categories_frais.each do |categorie_frais| %>
+          <div class="category-card-carousel">
+              <div id="mycategory" class="card-category" data-category-id="<%= categorie_frais.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(categorie_frais.photo_url) %>)">
+                <%= categorie_frais.name %>
                 <li class="carousel-item"></li>
               </div>
           </div>
         <% end %>
       </ul>
     </section>
-
+    <section class="carousel">
+      <h3>Produits ménagers</h3>
+      <ul class="carousel-items">
+        <% @categories_entretien.each do |categorie_entretien| %>
+          <div class="category-card-carousel">
+            <div id="mycategory" class="card-category" data-category-id="<%= categorie_entretien.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(categorie_entretien.photo_url) %>)">
+              <%= categorie_entretien.name %>
+              <li class="carousel-item"></li>
+            </div>
+          </div>
+        <% end %>
+      </ul>
+    </section>
 
   <div class="products">
     <% @products.each do |product| %>
@@ -37,8 +51,10 @@
           <div class="cart-form">
             <%= simple_form_for([ product, CartItem.new(product: product) ], remote: true) do |f| %>
               <%= f.input :product_id, as: :hidden %>
-              <%= f.button :submit, class: "btn btn-success" %>
-              <%# <i class="fas fa-shopping-basket"></i> %>
+
+                <%= button_tag(type: 'submit', class: "add-to-cart") do %>
+                  <%= icon('fas', 'shopping-bag') %>
+                <% end %>
             <% end %>
           </div>
           <div class="added-to-cart-btn"><%= image_tag "checked" %></div>
@@ -46,9 +62,11 @@
       </div>
     <% end %>
   </div>
-  <div class="navigation-buttons">
-    <%= link_to '^ Haut de page', categories_path, class: "btn-yellow" %>
-    <%= link_to "Afficher mon panier  >", cart_path, class: "btn-yellow" %>
+
+  <div class="navigation-buttons" id="right-align">
+    <% if current_user.cart_items.count > 0  %>
+      <%= link_to "Afficher mon panier (#{current_user.cart_items.count}) >",cart_path, class: "btn-yellow", id: "cart-button"%>
+    <% end  %>
   </div>
 
 </div>

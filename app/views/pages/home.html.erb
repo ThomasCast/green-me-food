@@ -1,52 +1,78 @@
-<div class="container">
 
-  <div>
-    <div class="home-page-top">
-      <h1>Green Me Food.</h1>
-      <a href="/categories" class="btn-yellow-home-page">Découvrez votre région</a>
-    </div>
-    <div>
-      <h3 id="slogan">Bring local, organic and quality products to your home.</h3>
-    </div>
+
+  <!-- ANIMATIONS -->
+  <div class="animation-strawberries">
+    <div id="straw-1" class="img-format"><%= image_tag "fraise1.png" %></div>
+    <div id="straw-2" class="img-format-big"><%= image_tag "fraise2.png" %></div>
+    <div id="straw-3" class="img-format-big"><%= image_tag "fraise3.png" %></div>
+    <div id="straw-4" class="img-format-big"><%= image_tag "fraise4.png" %></div>
+    <div id="straw-5" class="img-format-big"><%= image_tag "fraise5.png" %></div>
+    <div id="straw-6" class="img-format-big"><%= image_tag "fraise6.png" %></div>
+    <!-- <div id="straw-7" class="img-format-big"><%# image_tag "fraise7.png" %></div> -->
   </div>
 
-  <div class="description-1">
-    <div class="img-persona">
-    <%= image_tag"persona-1-home.svg", class: "persona-img" %>
-    </div>
-    <div class="txt-description">
-    <h3>Des produits locaux et de qualité</h3>
-    <p>Paragraph: Hover over the Google web fonts from the list on the right and click to select. Use the top right toggle to change the heading or body font family. Click the
-    download icon to view in Google fonts.</p>
-    </div>
+  <div class="arrow bounce">
+    <a class="fa fa-arrow-down fa-2x" href="#"></a>
   </div>
 
-  <div class="description-2">
-    <div class="img-persona">
-    <%= image_tag"persona-2-home.svg", class: "persona-img" %>
+  <div class="container container-home">
+
+    <div class="header">
+      <div class="brand">
+        <h1>Green Me Food.</h1>
+
+      </div>
+        <h3 id="slogan">Trouvez des produits locaux, bio et de qualité autour de vous.</h3>
+        <a href="/categories" class="btn-yellow-home-page">Découvrez votre région</a>
     </div>
-    <div class="txt-description">
-    <h3>Des producteurs mieux rémunérés</h3>
-    <p>Paragraph: Hover over the Google web fonts from the list on the right and click to select. Use the top right toggle to change the heading or body font family. Click the
-    download icon to view in Google fonts.</p>
+
+    <div id="description-1">
+      <%= image_tag"persona-1-home.svg", class: "persona-img" %>
+      <div class="txt-description">
+      <h3>Des produits locaux et de qualité</h3>
+      <p>Green Me Food vous permet de faire vos courses, tout en consommant des produits locaux, biologiques et de saison. Nous rencontrons chacun des producteurs présents sur notre plateforme, afin de choisir avec soin, les meilleurs produits issus de votre région.</p>
+      </div>
+    </div>
+
+    <div id="description-2">
+      <%= image_tag"persona-2-home.svg", class: "persona-img" %>
+      <div class="txt-description">
+      <h3>Des producteurs mieux rémunérés</h3>
+      <p>Nous attachons une attention particulière à ne pas mettre en concurrence nos producteurs. C’est pourquoi, vous ne verrez pas sur notre plateforme deux produits identiques appartenant à deux producteurs différents.</p>
+      </div>
+    </div>
+
+    <div id="description-3">
+      <%= image_tag"persona-3.svg", class: "persona-img" %>
+      <div class="txt-description">
+      <h3>Une livraison en toute confiance</h3>
+      <p>Nous avons choisi le format de pré-commande, afin de garantir la fraîcheur des produits. Une fois votre commande passée, les producteurs nous livrent leurs produits dans notre local situé au cœur de Marseille. Nous sous-traitons ensuite la livraison à votre domicile par une société de livreurs indépendants.</p>
+      </div>
+    </div>
+
+
+    <div class="testimonials">
+      <h2>Ils l'ont adopté</h2>
+      <div class="testimonial" id="pic-left">
+        <img class="hover" src="https://images.unsplash.com/photo-1533808510407-976bfd509dc2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="">
+        <div class="description">
+          <h3>Stéphane, producteur de raisins</h3>
+          <p>C'est un vrai plaisir de travailler avec les petits jeunes de Green Me Food. Leur plateforme me permet de d'éviter les grossites
+          et de vendre mes produits sur Marseille.</p>
+          <a href="" class="btn-yellow-thin hover">Découvrez ses savons</a>
+        </div>
+      </div>
+
+      <div class="testimonial bottom" id="pic-right">
+        <img class="hover" src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="">
+        <!-- <img src="https://unsplash.com/photos/aeh1dbI_a7I" alt=""> -->
+        <div class="description">
+          <h3>Corine, Greeneuse ponctuelle</h3>
+          <p>Grâce à Green Me Food, je peux enfin consommer des produits sains et issus de producteurs locaux.
+          J'ai enfin le sentiment d'agir pour mon économie locale et pour la planète! </p>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="description-3">
-    <div class="img-persona">
-    <%= image_tag"persona-3.svg", class: "persona-img" %>
-    </div>
-    <div class="txt-description">
-    <h3>Une livraison en toute confiance</h3>
-    <p>Paragraph: Hover over the Google web fonts from the list on the right and click to select. Use the top right toggle to change the heading or body font family. Click the
-    download icon to view in Google fonts.</p>
-    </div>
-  </div>
-
-<!--   <a href="#" class="btn-yellow">Yo</a><br>
-  <a href="#" class="btn-yellow">Découvrez votre région, Découvrez votre région</a> -->
-
-
 
 </div>
-

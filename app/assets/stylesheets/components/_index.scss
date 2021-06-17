@@ -1,5 +1,6 @@
 // Import your components CSS files here.
 @import "alert";
+@import "animation";
 @import "avatar";
 @import "btn_yellow";
 @import "card_cart_item";
@@ -11,7 +12,15 @@
 @import "footer";
 @import "form";
 @import "modal";
+@import "modal_success";
 @import "card";
 @import "cart";
 @import "navbar";
+@import "slide_in";
+@import "search_bar";
+@import "dropdown";
+@import "map";
 
+.products {
+  margin-top: 40px;
+}

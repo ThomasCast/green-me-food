@@ -14,14 +14,15 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  text-align: center;
 }
 
 .row {
   flex-wrap: nowrap;
 }
 
-.col-md-3 {
-  margin: 0px;
-  padding: 0px;
+.category-card-carousel {
+  padding-right: 10px;
+  min-width: 210px;
 }
 
