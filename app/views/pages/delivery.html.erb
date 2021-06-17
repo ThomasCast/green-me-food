@@ -3,7 +3,7 @@
 <% content_for :meta_image, image_path(DEFAULT_META["meta_image"]) %>
 
 <div class="container">
-  <h1>Livraison</h1>
+  <h1 style="padding-left: 13px">Livraison</h1>
   <div class="d-flex flex-row justify-content-between">
     <div class ="infos col-6">
       <div class="custom-list">
@@ -38,14 +38,16 @@
       </div>
     </div>
     <div class ="summary col-6">
-      <div class="checkout">
-        <h3>Récapulatif de votre commande</h3>
-        <div class="p-list">
-          <p>Produit</p>
-          <p>Quantité</p>
-          <p>Total</p>
-        </div>
+      <div id="checkout" class="monthly-total">
+        <h3>Récapitulatif de votre commande</h3>
+        <%= render 'cart_items/total_cart_table', items: current_user.cart_items %>
         <hr>
+        <div class="total-cart">
+          <% if current_user.total_cart > 0 %>
+            <p>Prix total:</p>
+            <p><%= current_user.total_cart %> €</p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
@@ -66,8 +68,9 @@
       <%= image_tag('Success.png') %>
     </div>
     <div class="modal-body-success">
-      <h3>Succès!</h3>
-      <p>Votre commande a bien été validée</p>
+      <h3>Merci!</h3>
+      <h5>Votre commande a bien été validée.</h5>
+      <h5>Vous allez recevoir un e-mail de confirmation.</h5>
     </div>
   </div>
 </div>
