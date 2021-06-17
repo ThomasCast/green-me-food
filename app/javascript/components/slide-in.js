@@ -41,4 +41,4 @@ const initFadeIn = () => {
 };
 
 
-export { initFadeIn };
+export { initFadeIn, checkSlide };
