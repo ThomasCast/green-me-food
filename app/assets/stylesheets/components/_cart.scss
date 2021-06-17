@@ -32,6 +32,12 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+  h5 {
+    color: #102D2D;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: $body-font;
+  }
 }
 
 #cart-title {
