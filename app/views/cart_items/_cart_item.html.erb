@@ -4,7 +4,7 @@
       <tr class="list-item" style="display:flex; justify-content: space-between">
         <td class="item-description" style="margin-right: 20px">
           <p style="overflow: hidden; whithe-space: nowrap; text-overflow: clip;"><%= item.product.name %></p>
-          <%= cl_image_tag(item.product.photo_url) %>
+          <%= image_tag(item.product.photo_url) %>
         </td>
           <td class="item-quantity">
           <% if item.quantity > 1 %>
