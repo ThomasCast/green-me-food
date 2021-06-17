@@ -2,5 +2,5 @@ if (document.querySelector('#cart-item-<%= @cart_item.id %>')) {
   document.querySelector('#cart-item-<%= @cart_item.id %>').remove();
   document.querySelector('#total-cart-item-<%= @cart_item.id %>').remove();
 }
-document.querySelector('.total-cart p').innerText =
+document.querySelector('.total-cart p#total-price').innerText =
   '<%= current_user.total_cart %>' + ' €';

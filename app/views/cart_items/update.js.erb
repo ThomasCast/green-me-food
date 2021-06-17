@@ -5,5 +5,5 @@ if (document.querySelector('#cart-item-<%= @cart_item.id %>')) {
   document.querySelector('#total-cart-item-<%= @cart_item.id %>').outerHTML =
     "<%= j render(:partial => 'cart_items/total_cart_item', :locals => { :item => @cart_item }) %>";
 }
-document.querySelector('.total-cart p').innerText =
+document.querySelector('.total-cart p#total-price').innerText =
   '<%= current_user.total_cart %>' + ' €';

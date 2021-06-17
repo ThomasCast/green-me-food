@@ -51,10 +51,10 @@ class CartItemsController < ApplicationController
 
   def cart
     @cart_items =  current_user.cart_items
-    @once_cart_items = @cart_items.where(buying_frequency: 1)
+    @once_cart_items = @cart_items.where(buying_frequency: 0)
     @weekly_cart_items = @cart_items.where(buying_frequency: 4)
     @biweekly_cart_items = @cart_items.where(buying_frequency: 2)
-    @monthly_cart_items = @cart_items.where(buying_frequency: 0)
+    @monthly_cart_items = @cart_items.where(buying_frequency: 1)
   end
 
   private

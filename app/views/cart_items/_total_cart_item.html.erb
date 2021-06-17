@@ -6,9 +6,9 @@
           <p style="overflow: hidden; whithe-space: nowrap; text-overflow: clip;"><%= item.product.name %></p>
         </td>
           <td class="item-quantity">
-            <%= item.quantity %> - <%= item.buying_frequency %>x/mois
+            <%= item.quantity %> - <%= item.display_frequency %>
           </td>
-          <td class="item-total-price" style="padding-top: 0px"><%= (item.product.price * item.quantity * item.buying_frequency).round(2) %>€</td>
+          <td class="item-total-price" style="padding-top: 0px"><%= (item.product.price * item.quantity * item.calculating_frequency).round(2) %>€</td>
       </tr>
     </tbody>
   </table>
