@@ -40,7 +40,7 @@
         <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url(<%= image_url(product.photo_url) %>) ">
           <div id="myproducer" class="producer" data-producer-id="<%= product.producer.id %>">
             <div class="producer-img"><%= image_tag(product.producer.photo_url) %></div>
-            <p><%= product.producer.name %>, producteur</p>
+            <p><%= product.producer.name %>, <%= product.producer.work %></p>
           </div>
           <div class="product">
             <div class="product-details">
