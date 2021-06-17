@@ -21,7 +21,7 @@ class CartItem < ApplicationRecord
     if self.buying_frequency == 0
       return "juste 1 fois"
     else
-      self.buying_frequency.to_s + " fois/mois"
+      "x " + self.buying_frequency.to_s + " / mois"
     end
   end
 
