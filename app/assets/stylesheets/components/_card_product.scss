@@ -1,8 +1,8 @@
 .card-product {
-  height: 320px;
-  width: 260px;
+  height: 300px;
+  width: 255px;
   border-radius: 6px;
-  margin: 20px 20px;
+  margin-bottom: 20px;
   // box-shadow: 4px 5px 10px rgba(0, 0, 0, .2);
   justify-self: center;
   transform-style: preserve-3d;
@@ -24,7 +24,7 @@
     img {
       position: absolute;
       right: 10px;
-      top: 270px;
+      top: 250px;
       height: 40px;
       width: 40px;
     }
@@ -145,7 +145,7 @@
   width: 40px;
   height: 40px;
   right: 10px;
-  top: 267px;
+  top: 247px;
   border: none;
   color: $beige;
   background-color: transparent;
