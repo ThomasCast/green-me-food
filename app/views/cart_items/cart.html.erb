@@ -10,7 +10,7 @@
       <h2>Vos articles</h2>
       <div class="frequency-choice">
         <h3>Juste cette fois-ci</h3>
-        <ul class="cart-list once-articles drag-card-unassigned" style="padding-left: 0px">
+        <ul class="cart-list once-articles drag-card-unassigned" data-frequency="0" style="padding-left: 0px">
           <%= render 'cart_items/cart_table', items: @once_cart_items %>
         </ul>
       </div>
@@ -20,8 +20,8 @@
         <hr>
         <div class="total-cart">
           <% if current_user.total_cart > 0 %>
-            <h5>Prix total:</h5>
-            <p><%= current_user.total_cart %> €</p>
+            <p>Prix total:</p>
+            <p id="total-price"><%= current_user.total_cart %> €</p>
           <% end %>
         </div>
       </div>

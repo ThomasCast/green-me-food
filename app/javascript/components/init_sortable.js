@@ -24,8 +24,10 @@ const handleDrop = (e) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      document.querySelector(data.newTotalLineId).outerHTML = data.newTotalLineContent;
-      document.querySelector('.total-cart p').innerText = data.newTotal + ' €';
+      document.querySelector(data.newTotalLineId).outerHTML =
+        data.newTotalLineContent;
+      document.querySelector('.total-cart p#total-price').innerText =
+        data.newTotal + ' €';
     });
 };
 
