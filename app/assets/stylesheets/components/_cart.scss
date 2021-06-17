@@ -9,7 +9,10 @@
 .item-quantity {
   display: flex;
   align-items: baseline;
+  position: absolute;
+  right: 195px;
 }
+
 .list-item {
   display: flex;
   align-items: center;
@@ -27,5 +30,10 @@
 
 .total-cart {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+#cart-title {
+  padding-left: 13px;
 }

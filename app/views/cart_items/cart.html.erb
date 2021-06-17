@@ -1,54 +1,45 @@
 <div class="container">
   <h1 id="cart-title">Commande</h1>
-
   <div class="container-cart">
     <div class="articles col-6">
       <h2>Vos articles</h2>
-
-    <div class="frequency-choice">
-      <h3>Juste cette fois-ci</h3>
-      <ul class="cart-list once-articles drag-card-unassigned" style="padding-left: 0px">
-       <%= render 'cart_items/cart_table', items: @once_cart_items %>
-      </ul>
-    </div>
-    <div class="monthly-total">
-      <h3>Total pour Juin</h3>
-      <%= render 'cart_items/total_cart_table', items: current_user.cart_items %>
-
-      <hr>
-      <div class="total-cart">
-        <p>PRIX TOTAL: <%= current_user.total_cart %> €</p>
+      <div class="frequency-choice">
+        <h3>Juste cette fois-ci</h3>
+        <ul class="cart-list once-articles drag-card-unassigned" style="padding-left: 0px">
+          <%= render 'cart_items/cart_table', items: @once_cart_items %>
+        </ul>
+      </div>
+      <div class="monthly-total">
+        <h3>Total pour le mois de Juin</h3>
+        <%= render 'cart_items/total_cart_table', items: current_user.cart_items %>
+        <hr>
+        <div class="total-cart">
+          <% if current_user.total_cart > 0 %>
+            <p>Prix total:</p>
+            <p><%= current_user.total_cart %> €</p>
+          <% end %>
+        </div>
       </div>
     </div>
-
-
     <div class="frequency-col col-6">
       <h2>Fréquence de livraison</h2>
-
-
-
       <div class="frequency-choice">
         <h3>Toutes les semaines</h3>
         <ul class="cart-list weekly-articles" data-frequency="4" style="padding-left: 0px">
-
           <%= render 'cart_items/cart_table', items: @weekly_cart_items %>
         </ul>
         <hr>
       </div>
-
       <div class="frequency-choice">
         <h3>Toutes les deux semaines</h3>
         <ul class="cart-list biweekly-articles" data-frequency="2" style="padding-left: 0px">
-
           <%= render 'cart_items/cart_table', items: @biweekly_cart_items %>
         </ul>
         <hr>
       </div>
-
       <div class="frequency-choice">
         <h3>Tous les mois</h3>
         <ul class="cart-list monthly-articles" data-frequency="1" style="padding-left: 0px">
-
           <%= render 'cart_items/cart_table', items: @monthly_cart_items %>
         </ul>
         <hr>

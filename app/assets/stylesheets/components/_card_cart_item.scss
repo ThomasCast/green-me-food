@@ -20,20 +20,26 @@
 
 .table-headers {
   border-bottom: 2px solid $green;
-  text-align: center;
   td {
     font-weight: bold;
+    padding: 8px 0px;
   }
 }
 
+#col-quantity { 
+  text-align: center;
+}
+
 #col-product {
-  padding: 8px 0px;
   text-align: left;
 }
 
 #col-product-up {
-  padding: 8px 18px;
   text-align: left;
+}
+
+#col-total {
+  text-align: right;
 }
 
 #col-price {
@@ -59,7 +65,6 @@
 }
 
 .item-description {
-  padding-left: 18px;
   padding-bottom: 8px;
   p {
     padding-top: 8px;
