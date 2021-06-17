@@ -13,6 +13,7 @@
 .list-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .item-single-price {
@@ -22,4 +23,9 @@
 
 .item-total-price {
   padding-top: 21px;
+}
+
+.total-cart {
+  display: flex;
+  justify-content: flex-end;
 }

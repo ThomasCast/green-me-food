@@ -9,7 +9,7 @@
       <h3>Produits frais</h3>
       <ul class="carousel-items">
         <% @categories_frais.each do |categorie_frais| %>
-          <div class="col-12 col-sm-7 col-md-3">
+          <div class="category-card-carousel">
               <div id="mycategory" class="card-category" data-category-id="<%= categorie_frais.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(categorie_frais.photo_url) %>)">
                 <%= categorie_frais.name %>
                 <li class="carousel-item"></li>
@@ -22,7 +22,7 @@
       <h3>Produits ménagers</h3>
       <ul class="carousel-items">
         <% @categories_entretien.each do |categorie_entretien| %>
-          <div class="col-12 col-sm-7 col-md-3">
+          <div class="category-card-carousel">
             <div id="mycategory" class="card-category" data-category-id="<%= categorie_entretien.id %>" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path(categorie_entretien.photo_url) %>)">
               <%= categorie_entretien.name %>
               <li class="carousel-item"></li>

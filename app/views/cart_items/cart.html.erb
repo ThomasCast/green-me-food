@@ -10,18 +10,19 @@
     <div class="articles col-6">
       <h2>Vos articles</h2>
 
-      <div class="frequency-choice">
-        <h3>Juste cette fois-ci</h3>
-        <ul class="cart-list once-articles drag-card-unassigned" style="padding-left: 0px">
-         <%= render 'cart_items/cart_table', items: @once_cart_items %>
-        </ul>
-      </div>
-      <div class="monthly-total">
-        <h3>Total pour Juin</h3>
-        <hr>
-        <div class="total-cart">
-          <p><%= current_user.total_cart %> €</p>
-        </div>
+    <div class="frequency-choice">
+      <h3>Juste cette fois-ci</h3>
+      <ul class="cart-list once-articles drag-card-unassigned" style="padding-left: 0px">
+       <%= render 'cart_items/cart_table', items: @once_cart_items %>
+      </ul>
+    </div>
+    <div class="monthly-total">
+      <h3>Total pour Juin</h3>
+      <%= render 'cart_items/total_cart_table', items: current_user.cart_items %>
+
+      <hr>
+      <div class="total-cart">
+        <p>PRIX TOTAL: <%= current_user.total_cart %> €</p>
       </div>
     </div>
 
